@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALIVE FASHION STUDIO BOUTIQUE | Custom Tailoring & Designer Wear</title>
+  <meta name="description" content="Exclusive custom dress design and bespoke tailoring for Men & Women by Master Designer Alamgir Seikh. Tollygunge, Kolkata.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              50: '#FBF8F0',
+              100: '#F7F0DF',
+              200: '#EDE0BF',
+              300: '#E0CB9B',
+              400: '#D4B574',
+              500: '#C5A059',
+              600: '#A9843F',
+              700: '#89692D',
+              800: '#6E5325',
+              900: '#5A4321',
+            },
+            royal: {
+              900: '#0F1115',
+              800: '#171A21',
+              700: '#222733',
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '"Hind Siliguri"', 'sans-serif'],
+            bengali: ['"Hind Siliguri"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .brand-title {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.15em;
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #AA771C 100%);
+    }
+    .gold-text-gradient {
+      background: linear-gradient(135deg, #ECC874 0%, #F5E8C7 50%, #C5A059 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .luxury-card {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .luxury-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -10px rgba(197, 160, 89, 0.15);
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #171A21;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C5A059;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-[#0B0D11] text-stone-200 antialiased selection:bg-gold-500 selection:text-black">
+
+  <!-- TOP BAR -->
+  <div class="bg-royal-900 border-b border-white/5 py-2 px-4 text-xs tracking-wider">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4 text-stone-400">
+        <span class="flex items-center gap-1.5 text-gold-400">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span data-i18n="topbar_badge">Custom Made to Order & Perfect Fitting Guaranteed</span>
+        </span>
+        <span class="hidden md:inline-block text-stone-600">|</span>
+        <span class="hidden md:flex items-center gap-1">
+          <i data-lucide="map-pin" class="w-3 h-3 text-gold-400"></i>
+          <span data-i18n="topbar_location">টালিগঞ্জ, কলকাতা | স্টুডিও ভিজিট ও হোম ডেলিভারি</span>
+        </span>
+      </div>
+      
+      <div class="flex items-center gap-3">
+        <a href="tel:+919333004877" class="flex items-center gap-1.5 text-stone-300 hover:text-gold-400 transition">
+          <i data-lucide="phone-call" class="w-3 h-3 text-gold-400"></i>
+          <span>+91 93330 04877</span>
+        </a>
+        <span class="text-stone-600">/</span>
+        <a href="tel:+917003280774" class="text-stone-300 hover:text-gold-400 transition hidden sm:inline">
+          <span>+91 70032 80774</span>
+        </a>
+        <div class="h-3 w-px bg-white/10"></div>
+        <!-- Language Switcher -->
+        <div class="flex items-center bg-white/5 rounded-full p-0.5 border border-white/10 text-[11px]">
+          <button id="btn-lang-bn" onclick="setLanguage('bn')" class="px-2.5 py-0.5 rounded-full bg-gold-500 text-black font-semibold transition">বাংলা</button>
+          <button id="btn-lang-en" onclick="setLanguage('en')" class="px-2.5 py-0.5 rounded-full text-stone-400 hover:text-white transition">EN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-[#0B0D11]/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="w-8 h-8 rounded-full border border-gold-400/50 flex items-center justify-center text-gold-400">
+              <i data-lucide="scissors" class="w-4 h-4"></i>
+            </span>
+            <span class="brand-title text-xl sm:text-2xl font-bold tracking-widest text-white">
+              ALIVE <span class="gold-text-gradient">FASHION</span>
+            </span>
+          </div>
+          <span class="text-[10px] tracking-[0.3em] uppercase text-gold-400/80 pl-10 font-medium">Studio & Boutique • Kolkata</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+          <a href="#collections" class="text-stone-300 hover:text-gold-400 transition" data-i18n="nav_collections">Collections</a>
+          <a href="#custom-tailoring" class="text-stone-300 hover:text-gold-400 transition" data-i18n="nav_custom">Custom Design</a>
+          <a href="#categories" class="text-stone-300 hover:text-gold-400 transition" data-i18n="nav_categories">Categories</a>
+          <a href="#measurement-guide" class="text-stone-300 hover:text-gold-400 transition" data-i18n="nav_measurement">Measurement Guide</a>
+          <a href="#reviews" class="text-stone-300 hover:text-gold-400 transition" data-i18n="nav_reviews">Reviews</a>
+          <a href="#about-founder" class="text-stone-300 hover:text-gold-400 transition">About Designer</a>
+          <a href="#contact" class="text-stone-300 hover:text-gold-400 transition" data-i18n="nav_contact">Contact</a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="hidden sm:flex items-center gap-3">
+          <button onclick="openCustomOrderModal()" class="px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold bg-gradient-to-r from-gold-500 to-gold-400 hover:from-gold-400 hover:to-gold-300 text-black shadow-lg shadow-gold-500/20 transition transform active:scale-95 flex items-center gap-2">
+            <i data-lucide="wand-2" class="w-4 h-4"></i>
+            <span data-i18n="btn_custom_order">Custom Order</span>
+          </button>
+          
+          <button onclick="openAppointmentModal()" class="px-4 py-2.5 rounded-full text-xs uppercase tracking-wider font-medium border border-white/20 hover:border-gold-400/60 text-stone-200 hover:text-gold-400 transition flex items-center gap-1.5">
+            <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+            <span data-i18n="btn_book_trial">Book Trial</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="lg:hidden flex items-center gap-2">
+          <button onclick="openCustomOrderModal()" class="px-3 py-1.5 rounded-full text-[11px] font-semibold bg-gold-500 text-black sm:hidden">
+            <span data-i18n="btn_order">Order</span>
+          </button>
+          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 text-stone-300 hover:text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-royal-900/95 backdrop-blur-lg px-4 py-6 space-y-4">
+      <a href="#collections" onclick="toggleMobileMenu()" class="block text-stone-200 hover:text-gold-400 py-1" data-i18n="nav_collections">Collections</a>
+      <a href="#custom-tailoring" onclick="toggleMobileMenu()" class="block text-stone-200 hover:text-gold-400 py-1" data-i18n="nav_custom">Custom Design</a>
+      <a href="#categories" onclick="toggleMobileMenu()" class="block text-stone-200 hover:text-gold-400 py-1" data-i18n="nav_categories">Categories</a>
+      <a href="#measurement-guide" onclick="toggleMobileMenu()" class="block text-stone-200 hover:text-gold-400 py-1" data-i18n="nav_measurement">Measurement Guide</a>
+      <a href="#reviews" onclick="toggleMobileMenu()" class="block text-stone-200 hover:text-gold-400 py-1" data-i18n="nav_reviews">Reviews</a>
+      <a href="#about-founder" onclick="toggleMobileMenu()" class="block text-stone-200 hover:text-gold-400 py-1">About Designer</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block text-stone-200 hover:text-gold-400 py-1" data-i18n="nav_contact">Contact</a>
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-2">
+        <button onclick="toggleMobileMenu(); openCustomOrderModal()" class="w-full py-3 rounded-xl bg-gold-500 text-black font-semibold text-center">
+          <span data-i18n="btn_custom_order">Custom Order</span>
+        </button>
+        <button onclick="toggleMobileMenu(); openAppointmentModal()" class="w-full py-3 rounded-xl border border-white/20 text-stone-200 font-medium text-center">
+          <span data-i18n="btn_book_trial">Book Trial</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-10 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-400/30 bg-gold-500/10 text-gold-300 text-xs tracking-wider uppercase font-medium">
+            <i data-lucide="sparkle" class="w-3.5 h-3.5 text-gold-400"></i>
+            <span data-i18n="hero_badge">Bespoke Tailoring & Designer Studio • Tollygunge, Kolkata</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]">
+            <span data-i18n="hero_title_1">Crafting Elegance,</span><br>
+            <span class="gold-text-gradient" data-i18n="hero_title_2">Tailored Just For You.</span>
+          </h1>
+
+          <p class="text-stone-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed" data-i18n="hero_subtitle">
+            মাস্টার ডিজাইনার আলমগীর শেখ-এর তত্ত্বাবধানে যেকোনো ডিজাইনের ছবি দেখিয়ে আপনার মনমতো পোশাক তৈরি করুন। Women & Men — Indian Ethnic, Western, Bridal Lehenga, Designer Blouse, Skirts, Party Wear, Shirts, Suits ও Pants পারফেক্ট ফিটিংয়ে তৈরি করা হয়।
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <button onclick="openCustomOrderModal()" class="px-7 py-3.5 rounded-full font-semibold bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 hover:brightness-110 text-black shadow-xl shadow-gold-500/25 transition transform active:scale-95 flex items-center gap-2.5">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              <span data-i18n="hero_cta_order">Order Custom Design</span>
+            </button>
+
+            <a href="https://wa.me/919333004877?text=Hello%20Alive%20Fashion%20Studio,%20I%20want%20to%20discuss%20a%20dress%20design!" target="_blank" class="px-6 py-3.5 rounded-full font-semibold border border-green-500/40 bg-green-500/10 text-green-400 hover:bg-green-500/20 transition flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span data-i18n="hero_cta_whatsapp">Chat on WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Feature Highlights / Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/10">
+            <div class="text-left">
+              <div class="text-gold-400 font-bold text-lg">100%</div>
+              <div class="text-xs text-stone-400" data-i18n="stat_fit">Custom Fit Guarantee</div>
+            </div>
+            <div class="text-left">
+              <div class="text-gold-400 font-bold text-lg">Photo To Dress</div>
+              <div class="text-xs text-stone-400" data-i18n="stat_photo">Any Design From Picture</div>
+            </div>
+            <div class="text-left">
+              <div class="text-gold-400 font-bold text-lg">Men & Women</div>
+              <div class="text-xs text-stone-400" data-i18n="stat_both">Indian & Western Wear</div>
+            </div>
+            <div class="text-left">
+              <div class="text-gold-400 font-bold text-lg">Tollygunge Studio</div>
+              <div class="text-xs text-stone-400" data-i18n="stat_delivery">Kolkata Trial & Delivery</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Visual Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="absolute -inset-1.5 bg-gradient-to-tr from-gold-500/40 to-transparent rounded-3xl blur-md"></div>
+            
+            <div class="relative rounded-3xl overflow-hidden border border-white/10 bg-royal-900 shadow-2xl">
+              <img id="hero-img" src="./images/hero-dress.jpg" alt="Alive Fashion Studio - Custom Handcrafted Designer Wear" class="w-full h-[480px] object-cover object-top transition duration-700 hover:scale-105">
+              
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D11] via-transparent to-transparent"></div>
+
+              <div class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-[#0B0D11]/85 backdrop-blur-md border border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-gold-400 font-semibold tracking-wider uppercase" data-i18n="hero_card_tag">Exclusive Collection</span>
+                  <h4 class="text-sm font-bold text-white">Handcrafted Zardozi Designer Wear</h4>
+                  <p class="text-[11px] text-stone-400">Custom cut, pure fabric & royal antique embroidery</p>
+                </div>
+                <button onclick="openCustomOrderModal('Handcrafted Zardozi Designer Wear')" class="px-3 py-1.5 rounded-lg bg-gold-500 text-black text-xs font-bold hover:bg-gold-400 transition" data-i18n="btn_order_now">
+                  Order
+                </button>
+              </div>
+            </div>
+
+            <div class="absolute -top-4 -left-4 p-3 rounded-2xl bg-royal-800/90 backdrop-blur-md border border-gold-500/30 shadow-xl hidden sm:flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-gold-500/20 flex items-center justify-center text-gold-400">
+                <i data-lucide="scissors" class="w-5 h-5"></i>
+              </div>
+              <div class="text-xs">
+                <p class="font-bold text-white">Alamgir Seikh</p>
+                <p class="text-stone-400 text-[10px]">Master Designer & Couturier</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK CATEGORIES SHOWCASE -->
+  <section id="categories" class="py-16 bg-royal-900/40 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-2" data-i18n="cat_pre">Our Expertise</h2>
+        <h3 class="text-2xl sm:text-3xl font-bold text-white font-serif" data-i18n="cat_title">What We Create For You</h3>
+        <p class="text-stone-400 text-sm mt-2" data-i18n="cat_desc">আপনার পছন্দমতো কাপড়, রঙ ও ডিজাইনে যেকোনো ধরনের পোশাক আমরা অত্যন্ত যত্নের সাথে তৈরি করি।</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div onclick="filterCategory('women-ethnic')" class="luxury-card cursor-pointer group p-5 rounded-2xl bg-royal-800/60 border border-white/5 hover:border-gold-500/40 text-center">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/10 group-hover:bg-gold-500/20 text-gold-400 flex items-center justify-center mb-4 transition">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-white group-hover:text-gold-300 transition" data-i18n="cat_1_title">Designer Blouse</h4>
+          <p class="text-xs text-stone-400 mt-1" data-i18n="cat_1_sub">Aari, Zardozi, Princess Cut & Deep Neck</p>
+        </div>
+
+        <div onclick="filterCategory('bridal')" class="luxury-card cursor-pointer group p-5 rounded-2xl bg-royal-800/60 border border-white/5 hover:border-gold-500/40 text-center">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/10 group-hover:bg-gold-500/20 text-gold-400 flex items-center justify-center mb-4 transition">
+            <i data-lucide="crown" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-white group-hover:text-gold-300 transition" data-i18n="cat_2_title">Lehengas & Party Gowns</h4>
+          <p class="text-xs text-stone-400 mt-1" data-i18n="cat_2_sub">Bridal, Reception, Flair Lehengas & Ball Gowns</p>
+        </div>
+
+        <div onclick="filterCategory('women-western')" class="luxury-card cursor-pointer group p-5 rounded-2xl bg-royal-800/60 border border-white/5 hover:border-gold-500/40 text-center">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/10 group-hover:bg-gold-500/20 text-gold-400 flex items-center justify-center mb-4 transition">
+            <i data-lucide="shirt" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-white group-hover:text-gold-300 transition" data-i18n="cat_3_title">Western Dresses & Skirts</h4>
+          <p class="text-xs text-stone-400 mt-1" data-i18n="cat_3_sub">Cocktail Dresses, Pleated Skirts, Corsets</p>
+        </div>
+
+        <div onclick="filterCategory('men')" class="luxury-card cursor-pointer group p-5 rounded-2xl bg-royal-800/60 border border-white/5 hover:border-gold-500/40 text-center">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/10 group-hover:bg-gold-500/20 text-gold-400 flex items-center justify-center mb-4 transition">
+            <i data-lucide="user-check" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-white group-hover:text-gold-300 transition" data-i18n="cat_4_title">Men's Suits & Sherwani</h4>
+          <p class="text-xs text-stone-400 mt-1" data-i18n="cat_4_sub">Tailored Suits, Shirts, Pants & Royal Kurta</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COLLECTIONS GALLERY & INTERACTIVE FILTER -->
+  <section id="collections" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <h2 class="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-2" data-i18n="col_pre">Handcrafted Portfolio</h2>
+          <h3 class="text-3xl font-bold text-white font-serif" data-i18n="col_title">Signature Designs & Collections</h3>
+          <p class="text-stone-400 text-sm mt-1" data-i18n="col_sub">আমাদের তৈরি করা জনপ্রিয় কিছু ডিজাইন। আপনার পছন্দ অনুযায়ী সাইজ ও কালার কাস্টমাইজ হবে।</p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex flex-wrap gap-2 text-xs">
+          <button onclick="filterCategory('all')" class="cat-filter-btn px-4 py-2 rounded-full font-medium bg-gold-500 text-black transition" data-cat="all" data-i18n="filter_all">All</button>
+          <button onclick="filterCategory('women-ethnic')" class="cat-filter-btn px-4 py-2 rounded-full font-medium bg-royal-800 text-stone-300 hover:text-white transition" data-cat="women-ethnic" data-i18n="filter_ethnic">Women's Ethnic (Lehenga/Blouse)</button>
+          <button onclick="filterCategory('women-western')" class="cat-filter-btn px-4 py-2 rounded-full font-medium bg-royal-800 text-stone-300 hover:text-white transition" data-cat="women-western" data-i18n="filter_western">Women's Western & Party</button>
+          <button onclick="filterCategory('men')" class="cat-filter-btn px-4 py-2 rounded-full font-medium bg-royal-800 text-stone-300 hover:text-white transition" data-cat="men" data-i18n="filter_men">Men's Collection</button>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div id="product-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Item 1: Bridal Lehenga -->
+        <div class="product-item luxury-card rounded-2xl overflow-hidden bg-royal-800/80 border border-white/5 flex flex-col" data-category="women-ethnic">
+          <div class="relative overflow-hidden aspect-[3/4]">
+            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Royal Velvet Bridal Lehenga" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/70 text-gold-400 backdrop-blur-sm border border-gold-400/30">
+              Bridal & Ethnic
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-white text-base">Royal Heritage Lehenga</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">Exquisite zardozi & hand embroidery with cancan layering and matching dupatta.</p>
+              <div class="mt-2.5 flex items-baseline gap-2">
+                <span class="text-gold-400 font-bold text-sm">Custom Tailored</span>
+                <span class="text-[11px] text-stone-500">From ₹ 12,500</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex gap-2">
+              <button onclick="openCustomOrderModal('Royal Heritage Lehenga')" class="flex-1 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-semibold transition flex items-center justify-center gap-1">
+                <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
+                <span data-i18n="btn_customize">Customize</span>
+              </button>
+              <a href="https://wa.me/919333004877?text=I%20am%20interested%20in%20Royal%20Heritage%20Lehenga" target="_blank" class="p-2 rounded-xl border border-green-500/30 text-green-400 hover:bg-green-500/10 transition">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Designer Silk Blouse -->
+        <div class="product-item luxury-card rounded-2xl overflow-hidden bg-royal-800/80 border border-white/5 flex flex-col" data-category="women-ethnic">
+          <div class="relative overflow-hidden aspect-[3/4]">
+            <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" alt="Handcrafted Aari Work Blouse" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/70 text-gold-400 backdrop-blur-sm border border-gold-400/30">
+              Women's Ethnic
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-white text-base">Handcrafted Aari Silk Blouse</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">Custom back neck cut, padded lining, maggam & aari pearl handwork.</p>
+              <div class="mt-2.5 flex items-baseline gap-2">
+                <span class="text-gold-400 font-bold text-sm">Custom Tailored</span>
+                <span class="text-[11px] text-stone-500">From ₹ 1,800</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex gap-2">
+              <button onclick="openCustomOrderModal('Handcrafted Aari Silk Blouse')" class="flex-1 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-semibold transition flex items-center justify-center gap-1">
+                <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
+                <span data-i18n="btn_customize">Customize</span>
+              </button>
+              <a href="https://wa.me/919333004877?text=I%20am%20interested%20in%20Aari%20Silk%20Blouse" target="_blank" class="p-2 rounded-xl border border-green-500/30 text-green-400 hover:bg-green-500/10 transition">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Western Party Gown -->
+        <div class="product-item luxury-card rounded-2xl overflow-hidden bg-royal-800/80 border border-white/5 flex flex-col" data-category="women-western">
+          <div class="relative overflow-hidden aspect-[3/4]">
+            <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80" alt="Western Party Gown" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/70 text-gold-400 backdrop-blur-sm border border-gold-400/30">
+              Western Party
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-white text-base">Emerald Evening Party Gown</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">Sleek satin finish with tailored corset bodice and elegant side-slit drape.</p>
+              <div class="mt-2.5 flex items-baseline gap-2">
+                <span class="text-gold-400 font-bold text-sm">Custom Tailored</span>
+                <span class="text-[11px] text-stone-500">From ₹ 4,500</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex gap-2">
+              <button onclick="openCustomOrderModal('Emerald Evening Party Gown')" class="flex-1 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-semibold transition flex items-center justify-center gap-1">
+                <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
+                <span data-i18n="btn_customize">Customize</span>
+              </button>
+              <a href="https://wa.me/919333004877?text=I%20am%20interested%20in%20Emerald%20Party%20Gown" target="_blank" class="p-2 rounded-xl border border-green-500/30 text-green-400 hover:bg-green-500/10 transition">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Men's Tailored Suit -->
+        <div class="product-item luxury-card rounded-2xl overflow-hidden bg-royal-800/80 border border-white/5 flex flex-col" data-category="men">
+          <div class="relative overflow-hidden aspect-[3/4]">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=600&q=80" alt="Men's Bespoke Suit" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/70 text-gold-400 backdrop-blur-sm border border-gold-400/30">
+              Men's Formal
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-white text-base">Bespoke 2-Piece Slim Suit</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">Italian cut blazer & trousers, handcrafted lapels, customized fit.</p>
+              <div class="mt-2.5 flex items-baseline gap-2">
+                <span class="text-gold-400 font-bold text-sm">Custom Tailored</span>
+                <span class="text-[11px] text-stone-500">From ₹ 8,000</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex gap-2">
+              <button onclick="openCustomOrderModal('Bespoke 2-Piece Suit')" class="flex-1 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-semibold transition flex items-center justify-center gap-1">
+                <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
+                <span data-i18n="btn_customize">Customize</span>
+              </button>
+              <a href="https://wa.me/919333004877?text=I%20am%20interested%20in%20Bespoke%20Suit" target="_blank" class="p-2 rounded-xl border border-green-500/30 text-green-400 hover:bg-green-500/10 transition">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Designer Pleated Skirt & Crop Top -->
+        <div class="product-item luxury-card rounded-2xl overflow-hidden bg-royal-800/80 border border-white/5 flex flex-col" data-category="women-western">
+          <div class="relative overflow-hidden aspect-[3/4]">
+            <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&q=80" alt="Pleated Skirt & Party Top" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/70 text-gold-400 backdrop-blur-sm border border-gold-400/30">
+              Western Casual & Party
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-white text-base">Chic Pleated Skirt & Bustier</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">High-waist accordion pleated skirt paired with custom fitted bustier top.</p>
+              <div class="mt-2.5 flex items-baseline gap-2">
+                <span class="text-gold-400 font-bold text-sm">Custom Tailored</span>
+                <span class="text-[11px] text-stone-500">From ₹ 3,200</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex gap-2">
+              <button onclick="openCustomOrderModal('Chic Pleated Skirt Set')" class="flex-1 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-semibold transition flex items-center justify-center gap-1">
+                <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
+                <span data-i18n="btn_customize">Customize</span>
+              </button>
+              <a href="https://wa.me/919333004877?text=I%20am%20interested%20in%20Pleated%20Skirt%20Set" target="_blank" class="p-2 rounded-xl border border-green-500/30 text-green-400 hover:bg-green-500/10 transition">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Men's Royal Sherwani -->
+        <div class="product-item luxury-card rounded-2xl overflow-hidden bg-royal-800/80 border border-white/5 flex flex-col" data-category="men">
+          <div class="relative overflow-hidden aspect-[3/4]">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Men's Royal Sherwani" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/70 text-gold-400 backdrop-blur-sm border border-gold-400/30">
+              Men's Ethnic
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-white text-base">Royal Jacquard Sherwani</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">Intricate threadwork collar, antique buttons, with tailored churidar or dhoti.</p>
+              <div class="mt-2.5 flex items-baseline gap-2">
+                <span class="text-gold-400 font-bold text-sm">Custom Tailored</span>
+                <span class="text-[11px] text-stone-500">From ₹ 9,500</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex gap-2">
+              <button onclick="openCustomOrderModal('Royal Jacquard Sherwani')" class="flex-1 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-semibold transition flex items-center justify-center gap-1">
+                <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
+                <span data-i18n="btn_customize">Customize</span>
+              </button>
+              <a href="https://wa.me/919333004877?text=I%20am%20interested%20in%20Royal%20Sherwani" target="_blank" class="p-2 rounded-xl border border-green-500/30 text-green-400 hover:bg-green-500/10 transition">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7: Tailored Formal Shirt & Pants -->
+        <div class="product-item luxury-card rounded-2xl overflow-hidden bg-royal-800/80 border border-white/5 flex flex-col" data-category="men">
+          <div class="relative overflow-hidden aspect-[3/4]">
+            <img src="https://images.unsplash.com/photo-1620012253295-c15c429fbb41?auto=format&fit=crop&w=600&q=80" alt="Men's Custom Shirt & Pants" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/70 text-gold-400 backdrop-blur-sm border border-gold-400/30">
+              Men's Essentials
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-white text-base">Custom Crisp Shirt & Chinos</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">Egyptian cotton custom-fitted shirts & stretch-comfort trousers/pants.</p>
+              <div class="mt-2.5 flex items-baseline gap-2">
+                <span class="text-gold-400 font-bold text-sm">Custom Tailored</span>
+                <span class="text-[11px] text-stone-500">From ₹ 2,200</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex gap-2">
+              <button onclick="openCustomOrderModal('Custom Crisp Shirt & Chinos')" class="flex-1 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-semibold transition flex items-center justify-center gap-1">
+                <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
+                <span data-i18n="btn_customize">Customize</span>
+              </button>
+              <a href="https://wa.me/919333004877?text=I%20am%20interested%20in%20Custom%20Shirt%20and%20Pants" target="_blank" class="p-2 rounded-xl border border-green-500/30 text-green-400 hover:bg-green-500/10 transition">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8: Anarkali Suit & Party Dress -->
+        <div class="product-item luxury-card rounded-2xl overflow-hidden bg-royal-800/80 border border-white/5 flex flex-col" data-category="women-ethnic">
+          <div class="relative overflow-hidden aspect-[3/4]">
+            <img src="https://images.unsplash.com/photo-1583391733975-0010996b758d?auto=format&fit=crop&w=600&q=80" alt="Floor Length Anarkali Suit" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/70 text-gold-400 backdrop-blur-sm border border-gold-400/30">
+              Women's Ethnic
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-white text-base">Heavy Flare Anarkali Suit</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">Georgette floor-length flair with gotapatti border and organza dupatta.</p>
+              <div class="mt-2.5 flex items-baseline gap-2">
+                <span class="text-gold-400 font-bold text-sm">Custom Tailored</span>
+                <span class="text-[11px] text-stone-500">From ₹ 5,500</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex gap-2">
+              <button onclick="openCustomOrderModal('Heavy Flare Anarkali Suit')" class="flex-1 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-semibold transition flex items-center justify-center gap-1">
+                <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
+                <span data-i18n="btn_customize">Customize</span>
+              </button>
+              <a href="https://wa.me/919333004877?text=I%20am%20interested%20in%20Anarkali%20Suit" target="_blank" class="p-2 rounded-xl border border-green-500/30 text-green-400 hover:bg-green-500/10 transition">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Custom Design Banner -->
+      <div class="mt-16 rounded-3xl p-8 sm:p-12 bg-gradient-to-r from-royal-800 via-royal-900 to-royal-800 border border-gold-500/30 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="space-y-3 text-center md:text-left z-10">
+          <span class="text-xs text-gold-400 uppercase tracking-widest font-semibold" data-i18n="banner_tag">Got your own dream design?</span>
+          <h3 class="text-2xl sm:text-3xl font-bold text-white font-serif" data-i18n="banner_title">ইন্টারনেট বা Pinterest থেকে ছবি দিন, হুবহু বানিয়ে দেব!</h3>
+          <p class="text-sm text-stone-400 max-w-xl" data-i18n="banner_desc">যেকোনো ছবি, ড্রয়িং বা ড্রেসের ভিডিও আপলোড করে আপনার মাপ দিয়ে সরাসরি আমাদের সাথে যোগাযোগ করুন।</p>
+        </div>
+        <div class="z-10">
+          <button onclick="openCustomOrderModal()" class="px-8 py-4 rounded-full bg-gold-500 hover:bg-gold-400 text-black font-bold text-sm tracking-wide shadow-xl shadow-gold-500/20 transition transform active:scale-95 flex items-center gap-2">
+            <i data-lucide="upload-cloud" class="w-4 h-4"></i>
+            <span data-i18n="btn_upload_design">Upload Design & Order</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS & MEASUREMENT GUIDE -->
+  <section id="measurement-guide" class="py-20 bg-royal-900/50 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-2" data-i18n="guide_pre">Easy 4-Step Process</h2>
+        <h3 class="text-2xl sm:text-3xl font-bold text-white font-serif" data-i18n="guide_title">How Custom Tailoring Works</h3>
+        <p class="text-stone-400 text-sm mt-2" data-i18n="guide_sub">ঘরে বসেই কীভাবে সহজে পছন্দের পোশাক পারফেক্ট মাপে বানাবেন</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="relative p-6 rounded-2xl bg-royal-800/40 border border-white/5 text-center">
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center mx-auto mb-4 text-lg">1</div>
+          <h4 class="font-bold text-white mb-2" data-i18n="step1_title">ডিজাইন পছন্দ করুন</h4>
+          <p class="text-xs text-stone-400" data-i18n="step1_desc">আমাদের ক্যাটালগ থেকে বাছাই করুন অথবা যেকোনো ছবি বা স্কেচ আপলোড করুন।</p>
+        </div>
+
+        <div class="relative p-6 rounded-2xl bg-royal-800/40 border border-white/5 text-center">
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center mx-auto mb-4 text-lg">2</div>
+          <h4 class="font-bold text-white mb-2" data-i18n="step2_title">কাপড় ও স্টাইল নির্বাচন</h4>
+          <p class="text-xs text-stone-400" data-i18n="step2_desc">আপনার পছন্দের ফ্যাব্রিক, সিল্ক, ভেলভেট, কটন বা নিজস্ব কাপড় আমাদের স্টুডিওতে দিতে পারেন।</p>
+        </div>
+
+        <div class="relative p-6 rounded-2xl bg-royal-800/40 border border-white/5 text-center">
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center mx-auto mb-4 text-lg">3</div>
+          <h4 class="font-bold text-white mb-2" data-i18n="step3_title">অনলাইনে মাপ প্রদান</h4>
+          <p class="text-xs text-stone-400" data-i18n="step3_desc">আমাদের সহজ মেজারমেন্ট ফর্ম পূরণ করুন অথবা স্টুডিওতে এসে ট্রায়াল দিন।</p>
+        </div>
+
+        <div class="relative p-6 rounded-2xl bg-royal-800/40 border border-white/5 text-center">
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center mx-auto mb-4 text-lg">4</div>
+          <h4 class="font-bold text-white mb-2" data-i18n="step4_title">ডেলিভারি ও ট্রায়াল ফিটিং</h4>
+          <p class="text-xs text-stone-400" data-i18n="step4_desc">পোশাক তৈরি হয়ে গেলে সরাসরি আপনার ঠিকানায় পৌঁছে দেওয়া হবে এবং ১০০% ফিটিং নিশ্চিত করা হবে।</p>
+        </div>
+      </div>
+
+      <!-- Measurement Helper Card -->
+      <div class="mt-12 p-6 rounded-2xl bg-royal-800/70 border border-gold-500/20 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-400 shrink-0">
+            <i data-lucide="ruler" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-base" data-i18n="measure_help_title">মাপ নিতে কোনো অসুবিধা হচ্ছে?</h4>
+            <p class="text-xs text-stone-400" data-i18n="measure_help_desc">আমাদের ডিজাইনারদের সাথে ভিডিও কলে বা হোয়াটসঅ্যাপে সরাসরি কথা বলে মাপ নিশ্চিত করতে পারেন।</p>
+          </div>
+        </div>
+        <a href="https://wa.me/919333004877?text=Please%20help%20me%20take%20accurate%20dress%20measurements" target="_blank" class="px-5 py-2.5 rounded-xl border border-green-500/40 text-green-400 hover:bg-green-500/10 text-xs font-semibold flex items-center gap-2">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span data-i18n="measure_help_btn">Ask on WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CLIENT REVIEWS / TESTIMONIALS -->
+  <section id="reviews" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-2" data-i18n="review_pre">Client Love</h2>
+        <h3 class="text-2xl sm:text-3xl font-bold text-white font-serif" data-i18n="review_title">What Our Customers Say</h3>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-royal-800/50 border border-white/5 space-y-4">
+          <div class="flex text-gold-400 gap-1">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-xs text-stone-300 leading-relaxed italic">
+            "আমার ব্রাইডাল লেহেঙ্গা এবং ৩টি সিল্ক ব্লাউজের কাজ করিয়েছিলাম ALIVE FASHION STUDIO থেকে। ফিনিশিং ও কাজের সূক্ষ্মতা অসাধারণ ছিল! আলমগীর স্যারের মেজারমেন্ট পারফেক্ট।"
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <div class="w-9 h-9 rounded-full bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center text-xs">TS</div>
+            <div>
+              <h5 class="text-xs font-bold text-white">Tanjila Sultana</h5>
+              <p class="text-[10px] text-stone-400">Bridal Lehenga Client (Kolkata)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-royal-800/50 border border-white/5 space-y-4">
+          <div class="flex text-gold-400 gap-1">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-xs text-stone-300 leading-relaxed italic">
+            "Got a custom Italian slim-fit blazer and two trousers made. The cut, fabric lining, and shoulder shape are top notch. Beats ready-made suits hands down!"
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <div class="w-9 h-9 rounded-full bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center text-xs">RK</div>
+            <div>
+              <h5 class="text-xs font-bold text-white">Rafiqul Karim</h5>
+              <p class="text-[10px] text-stone-400">Men's Bespoke Suit Client</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-royal-800/50 border border-white/5 space-y-4">
+          <div class="flex text-gold-400 gap-1">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-xs text-stone-300 leading-relaxed italic">
+            "Pinterest থেকে একটা ওয়েস্টার্ন পার্টি গাউনের ছবি পাঠিয়েছিলাম। ঠিক যেমন চেয়েছিলাম, ঠিক তেমনই বানিয়ে দিয়েছেন। সময়মতো টালিগঞ্জ স্টুডিও থেকে ডেলিভারি পেয়েছি!"
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <div class="w-9 h-9 rounded-full bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center text-xs">NA</div>
+            <div>
+              <h5 class="text-xs font-bold text-white">Nusrat Amin</h5>
+              <p class="text-[10px] text-stone-400">Western Party Gown Client</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- GOOGLE BUSINESS PROFILE & FOUNDER SPOTLIGHT -->
+      <div id="about-founder" class="mt-16 grid lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Google Business Profile Card -->
+        <div class="lg:col-span-7 p-6 sm:p-8 rounded-3xl bg-royal-800/70 border border-white/10 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex items-center gap-2">
+                <span class="text-2xl font-bold tracking-tight">
+                  <span class="text-[#4285F4]">G</span><span class="text-[#EA4335]">o</span><span class="text-[#FBBC05]">o</span><span class="text-[#4285F4]">g</span><span class="text-[#34A853]">l</span><span class="text-[#EA4335]">e</span>
+                </span>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 font-medium">Business Profile</span>
+              </div>
+              <span class="inline-flex items-center gap-1 text-xs text-green-400 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/20 font-medium">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Verified Studio
+              </span>
+            </div>
+
+            <h3 class="text-xl sm:text-2xl font-bold text-white font-serif">Check us out on Google</h3>
+            <p class="text-xs text-stone-300 mt-2 leading-relaxed">
+              Google-এ <strong class="text-white">Alive Fashion Studio</strong>-এর অফিশিয়াল প্রোফাইল দেখুন, গ্রাহকদের রিভিউ পড়ুন এবং আমাদের টালিগঞ্জ স্টুডিওর ডিরেকশন সহজে ম্যাপে খুঁজে নিন।
+            </p>
+
+            <div class="mt-4 flex items-center gap-3">
+              <div class="flex text-amber-400 gap-1 text-sm">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <span class="text-xs font-bold text-white">5.0 / 5.0 Rating on Google</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-white/10 flex flex-wrap gap-3">
+            <a href="https://maps.google.com/?q=Alive+Fashion+Studio+85/7,+Chanditala+Ln,+Ashok+Nagar,+Tollygunge,+Kolkata,+West+Bengal+700040" target="_blank" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+              <span>Google Maps ডিরেকশন</span>
+            </a>
+            <a href="https://www.facebook.com/alivefashionstudios/" target="_blank" class="px-5 py-2.5 rounded-xl border border-white/20 hover:border-blue-500/50 text-stone-200 hover:text-white font-semibold text-xs transition flex items-center gap-2">
+              <i data-lucide="facebook" class="w-3.5 h-3.5 text-blue-400"></i>
+              <span>Facebook Page</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Founder & Master Designer Spotlight -->
+        <div class="lg:col-span-5 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-royal-800 to-royal-900 border border-gold-500/30 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gold-500/20 text-gold-400 flex items-center justify-center mb-4">
+              <i data-lucide="award" class="w-6 h-6"></i>
+            </div>
+            <span class="text-[11px] uppercase tracking-widest text-gold-400 font-semibold">Founder & Master Couturier</span>
+            <h4 class="text-2xl font-bold text-white font-serif mt-1">Alamgir Seikh</h4>
+            <p class="text-xs text-stone-300 mt-2 leading-relaxed">
+              মাস্টার ডিজাইনার <strong class="text-white">আলমগীর শেখ</strong>-এর সুদীর্ঘ অভিজ্ঞতা ও ব্যক্তিগত তত্ত্বাবধানে প্রতিটি পোশাকের কাটিং, প্যাটার্ন ও এমব্রয়ডারি অত্যন্ত যত্ন ও নিখুঁত ফিনিশিংয়ে তৈরি করা হয়।
+            </p>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-white/10 space-y-2">
+            <div class="text-xs text-stone-400">সরাসরি কথা বলুন (Direct Call / WhatsApp):</div>
+            <div class="flex flex-wrap gap-2 text-xs font-bold">
+              <a href="tel:+919333004877" class="px-3.5 py-1.5 rounded-lg bg-royal-700 hover:bg-gold-500 hover:text-black text-gold-400 transition flex items-center gap-1.5">
+                <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                <span>9333004877</span>
+              </a>
+              <a href="tel:+917003280774" class="px-3.5 py-1.5 rounded-lg bg-royal-700 hover:bg-gold-500 hover:text-black text-gold-400 transition flex items-center gap-1.5">
+                <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                <span>7003280774</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER & STUDIO CONTACT -->
+  <footer id="contact" class="bg-royal-900 border-t border-white/10 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-full border border-gold-400/50 flex items-center justify-center text-gold-400">
+              <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
+            </span>
+            <span class="brand-title text-lg font-bold text-white tracking-widest">
+              ALIVE <span class="gold-text-gradient">FASHION</span>
+            </span>
+          </div>
+          <p class="text-xs text-stone-400 leading-relaxed" data-i18n="footer_bio">
+            Prestige bespoke tailoring & couture boutique. Directed & Master Tailored by <strong class="text-stone-300">Alamgir Seikh</strong>. We craft dresses for men and women across Indian ethnic, Western, party and bridal collections.
+          </p>
+          <div class="flex items-center gap-3 text-stone-400 pt-2">
+            <a href="https://www.facebook.com/alivefashionstudios/" target="_blank" rel="noreferrer" title="Facebook Page" class="w-8 h-8 rounded-full bg-white/5 hover:bg-blue-600 hover:text-white flex items-center justify-center transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+            <a href="https://wa.me/919333004877" target="_blank" rel="noreferrer" title="WhatsApp Chat" class="w-8 h-8 rounded-full bg-white/5 hover:bg-green-500 hover:text-black flex items-center justify-center transition"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+            <a href="https://maps.google.com/?q=85/7,+Chanditala+Ln,+Ashok+Nagar,+Tollygunge,+Kolkata,+West+Bengal+700040" target="_blank" rel="noreferrer" title="Google Business Profile" class="w-8 h-8 rounded-full bg-white/5 hover:bg-gold-500 hover:text-black flex items-center justify-center transition"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold tracking-widest uppercase text-white" data-i18n="footer_categories">Categories</h4>
+          <ul class="text-xs space-y-2 text-stone-400">
+            <li><a href="#collections" onclick="filterCategory('women-ethnic')" class="hover:text-gold-400 transition">Bridal Lehengas & Saree Blouses</a></li>
+            <li><a href="#collections" onclick="filterCategory('women-western')" class="hover:text-gold-400 transition">Western Gowns & Pleated Skirts</a></li>
+            <li><a href="#collections" onclick="filterCategory('men')" class="hover:text-gold-400 transition">Men's Tailored Suits & Blazers</a></li>
+            <li><a href="#collections" onclick="filterCategory('men')" class="hover:text-gold-400 transition">Sherwani, Kurta & Casual Shirts</a></li>
+            <li><a href="#custom-tailoring" class="hover:text-gold-400 transition">Custom Party Wear & Costumes</a></li>
+          </ul>
+        </div>
+
+        <!-- Studio Hours -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold tracking-widest uppercase text-white" data-i18n="footer_hours_title">Studio Hours</h4>
+          <ul class="text-xs space-y-2 text-stone-400">
+            <li class="flex justify-between">
+              <span>Saturday - Thursday:</span>
+              <span class="text-white font-medium">10:00 AM - 9:00 PM</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Friday:</span>
+              <span class="text-white font-medium">3:00 PM - 9:00 PM</span>
+            </li>
+            <li class="pt-2 text-gold-400/90 flex items-center gap-1.5">
+              <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+              <span>Consultations by appointment</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Visit & Contact -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold tracking-widest uppercase text-white" data-i18n="footer_contact_title">Studio Location</h4>
+          <ul class="text-xs space-y-2.5 text-stone-400">
+            <li class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+              <div>
+                <p class="text-stone-300 font-medium">85/7, Chanditala Ln, Ashok Nagar, Tollygunge, Kolkata, West Bengal 700040</p>
+                <a href="https://maps.google.com/?q=85/7,+Chanditala+Ln,+Ashok+Nagar,+Tollygunge,+Kolkata,+West+Bengal+700040" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-gold-400 hover:underline mt-1">
+                  <span>Google Maps-এ দেখুন (Get Directions)</span>
+                  <i data-lucide="external-link" class="w-3 h-3"></i>
+                </a>
+              </div>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-gold-400 shrink-0"></i>
+              <div class="flex flex-wrap gap-x-2">
+                <a href="tel:+919333004877" class="hover:text-gold-400 transition font-medium text-stone-200">+91 93330 04877</a>
+                <span class="text-stone-600">/</span>
+                <a href="tel:+917003280774" class="hover:text-gold-400 transition font-medium text-stone-200">+91 70032 80774</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="user" class="w-4 h-4 text-gold-400 shrink-0"></i>
+              <span>Designer & Founder: <strong class="text-white">Alamgir Seikh</strong></span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-gold-400 shrink-0"></i>
+              <span>info@alivefashionstudio.com</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <p>© 2026 ALIVE FASHION STUDIO BOUTIQUE. Master Couturier: Alamgir Seikh.</p>
+        <p class="flex items-center gap-1">
+          Designed with <i data-lucide="heart" class="w-3 h-3 text-red-500 fill-current"></i> for high-fashion boutique lovers.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/919333004877?text=Hello!%20I%20want%20to%20know%20more%20about%20custom%20dress%20design%20at%20Alive%20Fashion%20Studio." target="_blank" class="fixed bottom-6 right-6 z-50 p-3.5 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl shadow-green-500/40 flex items-center justify-center transition-all duration-300 hover:scale-110 group">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 text-xs font-bold px-0 group-hover:px-2">WhatsApp Order</span>
+  </a>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- CUSTOM ORDER & MEASUREMENT MODAL -->
+  <div id="modal-custom-order" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm overflow-y-auto flex items-center justify-center p-4">
+    <div class="relative w-full max-w-2xl bg-royal-800 rounded-3xl border border-gold-500/30 p-6 sm:p-8 shadow-2xl my-8">
+      
+      <!-- Close Button -->
+      <button onclick="closeCustomOrderModal()" class="absolute top-5 right-5 p-2 text-stone-400 hover:text-white rounded-full bg-white/5 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="mb-6">
+        <span class="text-xs text-gold-400 uppercase tracking-widest font-semibold flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Custom Made-to-Order</span>
+        </span>
+        <h3 class="text-2xl font-bold text-white font-serif mt-1" data-i18n="modal_order_title">আপনার পছন্দের পোশাকের অর্ডার দিন</h3>
+        <p class="text-xs text-stone-400 mt-1" data-i18n="modal_order_desc">ফর্মটি পূরণ করুন এবং সরাসরি হোয়াটসঅ্যাপে পুরো বিবরণ ও মাপসহ পাঠিয়ে দিন।</p>
+      </div>
+
+      <!-- Order Form -->
+      <form id="custom-order-form" onsubmit="handleOrderSubmit(event)" class="space-y-5">
+        
+        <!-- Row 1: Garment Type & Category -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-medium text-stone-300 mb-1" data-i18n="form_dress_type">পোশাকের ধরণ (Dress Type)*</label>
+            <select id="dress-type" required class="w-full bg-royal-900 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+              <option value="Blouse (ব্লাউজ)">Blouse (ব্লাউজ - Aari / Designer)</option>
+              <option value="Lehenga (লেহেঙ্গা)">Lehenga (লেহেঙ্গা - Bridal / Party)</option>
+              <option value="Party Dress / Gown (গাউন)">Party Dress / Gown (গাউন)</option>
+              <option value="Skirt & Top (স্কার্ট ও টপ)">Skirt & Top (স্কার্ট ও টপ)</option>
+              <option value="Men's Suit / Blazer (স্যুট)">Men's Suit / Blazer (স্যুট / ব্লেজার)</option>
+              <option value="Men's Sherwani (শেরওয়ানি)">Men's Sherwani / Kurta (শেরওয়ানি / কুর্তা)</option>
+              <option value="Shirt & Pants (শার্ট ও প্যান্ট)">Shirt & Pants (শার্ট ও প্যান্ট)</option>
+              <option value="Other Custom Design (অন্যান্য)">Other Custom Design (অন্যান্য যেকোনো ডিজাইন)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-stone-300 mb-1" data-i18n="form_fabric">কাপড় / ফ্যাব্রিক (Fabric Preference)</label>
+            <select id="fabric-type" class="w-full bg-royal-900 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+              <option value="Studio Provides Fabric">Studio Provides Fabric (স্টুডিও থেকে কাপড় নেওয়া হবে)</option>
+              <option value="Customer's Own Fabric">I will provide my own fabric (আমার নিজের কাপড় আছে)</option>
+              <option value="Pure Silk / Katan">Pure Silk / Katan (সিল্ক / কাতান)</option>
+              <option value="Georgette / Chiffon">Georgette / Chiffon (জর্জেট / শিফন)</option>
+              <option value="Velvet / Satin">Velvet / Satin (ভেলভেট / সাটিন)</option>
+              <option value="Cotton / Linen">Cotton / Linen (কটন / লিনেন)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Row 2: Image Upload / Inspiration -->
+        <div>
+          <label class="block text-xs font-medium text-stone-300 mb-1" data-i18n="form_upload">ডিজাইন রেফারেন্স ফটো (Inspiration / Photo Upload)</label>
+          <div class="border-2 border-dashed border-white/10 hover:border-gold-500/50 rounded-2xl p-4 text-center cursor-pointer transition relative bg-royal-900/50">
+            <input type="file" id="design-photo" accept="image/*" onchange="previewDesignImage(event)" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
+            <div id="upload-placeholder" class="flex flex-col items-center justify-center gap-1.5">
+              <i data-lucide="image" class="w-6 h-6 text-gold-400"></i>
+              <span class="text-xs text-stone-300 font-medium">ক্লিক করে ছবি আপলোড করুন (বা ড্র্যাগ করুন)</span>
+              <span class="text-[10px] text-stone-500">PNG, JPG, WEBP (Pinterest, Instagram বা যেকোনো স্কেচ)</span>
+            </div>
+            <!-- Image preview -->
+            <div id="image-preview-container" class="hidden flex items-center justify-center gap-3">
+              <img id="image-preview" src="#" alt="Design Preview" class="w-16 h-16 object-cover rounded-xl border border-gold-500">
+              <div class="text-left">
+                <p id="preview-filename" class="text-xs font-semibold text-white truncate max-w-[200px]"></p>
+                <span class="text-[10px] text-green-400">✓ Image ready to attach</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Measurement Choice: Standard or Custom -->
+        <div class="bg-royal-900/60 p-4 rounded-2xl border border-white/5 space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-bold text-white flex items-center gap-1.5">
+              <i data-lucide="ruler" class="w-4 h-4 text-gold-400"></i>
+              <span data-i18n="form_measure_mode">পরিমাপ / সাইজ নির্বাচন (Measurements)</span>
+            </label>
+            <div class="flex gap-2 text-[11px]">
+              <button type="button" onclick="setMeasureTab('standard')" id="tab-std" class="px-2.5 py-1 rounded-lg bg-gold-500 text-black font-semibold">Standard</button>
+              <button type="button" onclick="setMeasureTab('custom')" id="tab-cust" class="px-2.5 py-1 rounded-lg bg-white/5 text-stone-300 hover:text-white">Custom (Inches)</button>
+            </div>
+          </div>
+
+          <!-- Standard Size Select -->
+          <div id="measure-standard-box">
+            <div class="grid grid-cols-5 gap-2">
+              <label class="cursor-pointer text-center">
+                <input type="radio" name="std-size" value="S (34-36)" class="peer sr-only">
+                <div class="p-2 rounded-xl bg-royal-800 peer-checked:bg-gold-500 peer-checked:text-black text-xs font-bold transition">S</div>
+              </label>
+              <label class="cursor-pointer text-center">
+                <input type="radio" name="std-size" value="M (38-40)" checked class="peer sr-only">
+                <div class="p-2 rounded-xl bg-royal-800 peer-checked:bg-gold-500 peer-checked:text-black text-xs font-bold transition">M</div>
+              </label>
+              <label class="cursor-pointer text-center">
+                <input type="radio" name="std-size" value="L (42)" class="peer sr-only">
+                <div class="p-2 rounded-xl bg-royal-800 peer-checked:bg-gold-500 peer-checked:text-black text-xs font-bold transition">L</div>
+              </label>
+              <label class="cursor-pointer text-center">
+                <input type="radio" name="std-size" value="XL (44)" class="peer sr-only">
+                <div class="p-2 rounded-xl bg-royal-800 peer-checked:bg-gold-500 peer-checked:text-black text-xs font-bold transition">XL</div>
+              </label>
+              <label class="cursor-pointer text-center">
+                <input type="radio" name="std-size" value="XXL (46+)" class="peer sr-only">
+                <div class="p-2 rounded-xl bg-royal-800 peer-checked:bg-gold-500 peer-checked:text-black text-xs font-bold transition">XXL</div>
+              </label>
+            </div>
+            <p class="text-[10px] text-stone-400 mt-2">* আপনার মাপ অনুযায়ী পরে আমরা অ্যাডজাস্ট করে দেব।</p>
+          </div>
+
+          <!-- Custom Exact Measurements (Inches) -->
+          <div id="measure-custom-box" class="hidden grid grid-cols-3 gap-3">
+            <div>
+              <label class="block text-[11px] text-stone-400">Chest/Bust (ইঞ্চি)</label>
+              <input type="number" step="0.5" id="meas-bust" placeholder="e.g. 36" class="w-full bg-royal-900 border border-white/10 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-stone-400">Waist (কোমড়)</label>
+              <input type="number" step="0.5" id="meas-waist" placeholder="e.g. 30" class="w-full bg-royal-900 border border-white/10 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-stone-400">Hips (হিপ)</label>
+              <input type="number" step="0.5" id="meas-hips" placeholder="e.g. 38" class="w-full bg-royal-900 border border-white/10 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-stone-400">Shoulder (কাধ)</label>
+              <input type="number" step="0.5" id="meas-shoulder" placeholder="e.g. 14.5" class="w-full bg-royal-900 border border-white/10 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-stone-400">Sleeve (হাতা দৈর্ঘ্য)</label>
+              <input type="number" step="0.5" id="meas-sleeve" placeholder="e.g. 18" class="w-full bg-royal-900 border border-white/10 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-stone-400">Total Length (দৈর্ঘ্য)</label>
+              <input type="number" step="0.5" id="meas-length" placeholder="e.g. 42" class="w-full bg-royal-900 border border-white/10 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Instructions -->
+        <div>
+          <label class="block text-xs font-medium text-stone-300 mb-1" data-i18n="form_notes">বিশেষ কোনো নির্দেশনা / বিবরণ (Special Instructions)</label>
+          <textarea id="order-notes" rows="2" placeholder="যেমন: গলার কাটিং কেমন চান, ব্যাক ডিজাইন, লেইস বা এমব্রয়ডারি সম্পর্কিত নির্দেশনা..." class="w-full bg-royal-900 border border-white/10 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-gold-500"></textarea>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-medium text-stone-300 mb-1" data-i18n="form_name">আপনার নাম (Your Name)*</label>
+            <input type="text" id="cust-name" required placeholder="Full Name" class="w-full bg-royal-900 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-stone-300 mb-1" data-i18n="form_phone">ফোন / WhatsApp নম্বর*</label>
+            <input type="tel" id="cust-phone" required placeholder="+91 9XXXXXXXXX" class="w-full bg-royal-900 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-2">
+          <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold text-sm tracking-wide shadow-xl shadow-green-500/25 transition transform active:scale-95 flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+            <span data-i18n="btn_submit_whatsapp">WhatsApp-এ অর্ডার পাঠান (Send Order via WhatsApp)</span>
+          </button>
+          <p class="text-[11px] text-stone-400 text-center mt-2" data-i18n="form_instant_note">
+            * বাটনে চাপ দিলে আপনার WhatsApp ওপেন হবে এবং সকল তথ্য স্বয়ংক্রিয়ভাবে মেসেজ হিসেবে প্রস্তুত হয়ে যাবে।
+          </p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- APPOINTMENT / TRIAL BOOKING MODAL -->
+  <div id="modal-appointment" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm overflow-y-auto flex items-center justify-center p-4">
+    <div class="relative w-full max-w-lg bg-royal-800 rounded-3xl border border-gold-500/30 p-6 sm:p-8 shadow-2xl my-8">
+      
+      <button onclick="closeAppointmentModal()" class="absolute top-5 right-5 p-2 text-stone-400 hover:text-white rounded-full bg-white/5 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-xs text-gold-400 uppercase tracking-widest font-semibold flex items-center gap-1.5">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>VIP Studio Consultation</span>
+        </span>
+        <h3 class="text-2xl font-bold text-white font-serif mt-1" data-i18n="modal_appoint_title">ট্রায়াল ও কনসালটেশন বুকিং</h3>
+        <p class="text-xs text-stone-400 mt-1" data-i18n="modal_appoint_desc">স্টুডিওতে এসে ট্রায়াল বা স্পেশাল ব্রাইডাল ডিজাইনারের সাথে আলোচনার সময় নির্ধারণ করুন।</p>
+      </div>
+
+      <form id="appointment-form" onsubmit="handleAppointmentSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-medium text-stone-300 mb-1">আপনার নাম (Name)*</label>
+          <input type="text" id="app-name" required placeholder="Full Name" class="w-full bg-royal-900 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-stone-300 mb-1">WhatsApp নম্বর*</label>
+          <input type="tel" id="app-phone" required placeholder="+91 9XXXXXXXXX" class="w-full bg-royal-900 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-stone-300 mb-1">তারিখ (Date)*</label>
+            <input type="date" id="app-date" required class="w-full bg-royal-900 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-stone-300 mb-1">সময় (Preferred Time)*</label>
+            <select id="app-time" required class="w-full bg-royal-900 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white">
+              <option value="11:00 AM">11:00 AM (সকাল)</option>
+              <option value="02:00 PM">02:00 PM (দুপুর)</option>
+              <option value="04:30 PM">04:30 PM (বিকাল)</option>
+              <option value="07:00 PM">07:00 PM (সন্ধ্যা)</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-stone-300 mb-1">উদ্দেশ্য (Purpose)</label>
+          <select id="app-purpose" class="w-full bg-royal-900 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white">
+            <option value="Bridal Lehenga & Gown Consultation">Bridal Lehenga & Gown Consultation</option>
+            <option value="Men's Bespoke Suit / Sherwani Fitting">Men's Bespoke Suit / Sherwani Fitting</option>
+            <option value="Designer Blouse & Party Wear Customization">Designer Blouse & Party Wear Customization</option>
+            <option value="Trial & Measurement Session">Trial & Measurement Session</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full mt-4 py-3.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black font-bold text-xs uppercase tracking-wider transition">
+          Confirm Appointment via WhatsApp
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Studio Primary WhatsApp Phone Number (International format for India)
+    const STUDIO_WHATSAPP_NUMBER = "919333004877";
+
+    // Translation Dictionaries
+    const translations = {
+      en: {
+        topbar_badge: "Custom Made to Order & Perfect Fitting Guaranteed",
+        topbar_location: "Tollygunge, Kolkata | Studio Visit & Home Delivery",
+        nav_collections: "Collections",
+        nav_custom: "Custom Design",
+        nav_categories: "Categories",
+        nav_measurement: "Measurement Guide",
+        nav_reviews: "Reviews",
+        nav_contact: "Contact",
+        btn_custom_order: "Custom Order",
+        btn_book_trial: "Book Trial",
+        btn_order: "Order",
+        hero_badge: "Bespoke Tailoring & Designer Studio • Tollygunge, Kolkata",
+        hero_title_1: "Crafting Elegance,",
+        hero_title_2: "Tailored Just For You.",
+        hero_subtitle: "Under the direct supervision of Master Couturier Alamgir Seikh, order any dress design simply by showing a picture. Men & Women — Indian Ethnic, Western, Bridal Lehenga, Designer Blouse, Skirts, Party Wear, Shirts, Suits & Pants made to exact perfection.",
+        hero_cta_order: "Order Custom Design",
+        hero_cta_whatsapp: "Chat on WhatsApp",
+        stat_fit: "Custom Fit Guarantee",
+        stat_photo: "Any Design From Picture",
+        stat_both: "Indian & Western Wear",
+        stat_delivery: "Kolkata Trial & Delivery",
+        hero_card_tag: "Exclusive Collection",
+        hero_card_title: "Bridal Lehengas & Designer Blouses",
+        hero_card_sub: "Hand-embroidered zardozi & custom cut",
+        btn_order_now: "Order",
+        cat_pre: "Our Expertise",
+        cat_title: "What We Create For You",
+        cat_desc: "We craft dresses with the finest fabrics, custom colors, and personalized design touches with immense care.",
+        cat_1_title: "Designer Blouses",
+        cat_1_sub: "Aari, Zardozi, Princess Cut & Deep Neck",
+        cat_2_title: "Lehengas & Party Gowns",
+        cat_2_sub: "Bridal, Reception, Flair Lehengas & Ball Gowns",
+        cat_3_title: "Western Dresses & Skirts",
+        cat_3_sub: "Cocktail Dresses, Pleated Skirts, Corsets",
+        cat_4_title: "Men's Suits & Sherwani",
+        cat_4_sub: "Tailored Suits, Shirts, Pants & Royal Kurta",
+        col_pre: "Handcrafted Portfolio",
+        col_title: "Signature Designs & Collections",
+        col_sub: "Some of our most popular designs. Each can be customized in fabric, size, and styling.",
+        filter_all: "All",
+        filter_ethnic: "Women's Ethnic (Lehenga/Blouse)",
+        filter_western: "Women's Western & Party",
+        filter_men: "Men's Collection",
+        btn_customize: "Customize",
+        banner_tag: "Got your own dream design?",
+        banner_title: "Show any photo from Pinterest or Instagram, we will craft it!",
+        banner_desc: "Upload any reference image or sketch with your exact measurements and get in touch with our master designer.",
+        btn_upload_design: "Upload Design & Order",
+        guide_pre: "Easy 4-Step Process",
+        guide_title: "How Custom Tailoring Works",
+        guide_sub: "How to get your perfect tailor-made dress right from home",
+        step1_title: "Choose or Upload Design",
+        step1_desc: "Pick from our showcase or upload any reference photo or sketch.",
+        step2_title: "Fabric & Styling",
+        step2_desc: "Select pure silk, georgette, velvet, linen or drop off your own fabric.",
+        step3_title: "Give Measurements",
+        step3_desc: "Fill in our intuitive measurement form or schedule an in-studio fitting.",
+        step4_title: "Delivery & Trial Fitting",
+        step4_desc: "Get your customized garment delivered with our 100% fit assurance.",
+        measure_help_title: "Need help taking measurements?",
+        measure_help_desc: "Connect with our designers on WhatsApp or video call to measure accurately.",
+        measure_help_btn: "Ask on WhatsApp",
+        review_pre: "Client Love",
+        review_title: "What Our Customers Say",
+        modal_order_title: "Order Your Custom Design",
+        modal_order_desc: "Fill in the details below to generate a pre-formatted order directly to our studio WhatsApp.",
+        form_dress_type: "Garment Type*",
+        form_fabric: "Fabric Preference",
+        form_upload: "Design Reference Photo (Inspiration)",
+        form_measure_mode: "Measurements & Sizing",
+        form_notes: "Special Instructions / Design Notes",
+        form_name: "Your Name*",
+        form_phone: "WhatsApp Number*",
+        btn_submit_whatsapp: "Send Order via WhatsApp",
+        form_instant_note: "* Clicking this opens WhatsApp with all order details and measurements neatly formatted."
+      },
+      bn: {
+        topbar_badge: "কাস্টম মেড পোশাক ও ১০০% পারফেক্ট ফিটিং গ্যারান্টি",
+        topbar_location: "টালিগঞ্জ, কলকাতা | স্টুডিও ভিজিট ও হোম ডেলিভারি",
+        nav_collections: "কালেকশন",
+        nav_custom: "কাস্টম ডিজাইন",
+        nav_categories: "ক্যাটাগরি",
+        nav_measurement: "মাপ নেওয়ার নিয়ম",
+        nav_reviews: "রিভিউ",
+        nav_contact: "যোগাযোগ",
+        btn_custom_order: "কাস্টম অর্ডার",
+        btn_book_trial: "ট্রায়াল বুকিং",
+        btn_order: "অর্ডার",
+        hero_badge: "প্রিমিয়াম বুটিক ও কাস্টম টেইলারিং স্টুডিও • টালিগঞ্জ, কলকাতা",
+        hero_title_1: "আপনার নিজস্ব স্টাইলে,",
+        hero_title_2: "তৈরি সেরা এক্সক্লুসিভ পোশাক।",
+        hero_subtitle: "মাস্টার ডিজাইনার আলমগীর শেখ-এর তত্ত্বাবধানে যেকোনো ডিজাইনের ছবি দেখিয়ে আপনার মনমতো ড্রেস তৈরি করুন। Women & Men — Indian Ethnic, Western, Bridal Lehenga, Designer Blouse, Skirts, Party Wear, Shirts, Suits ও Pants পারফেক্ট ফিটিংয়ে তৈরি করা হয়।",
+        hero_cta_order: "কাস্টম ডিজাইন অর্ডার করুন",
+        hero_cta_whatsapp: "WhatsApp-এ কথা বলুন",
+        stat_fit: "১০০% ফিটিং গ্যারান্টি",
+        stat_photo: "যেকোনো ছবির মতো ড্রেস",
+        stat_both: "ছেলে ও মেয়েদের পোশাক",
+        stat_delivery: "টালিগঞ্জ স্টুডিও ও ট্রায়াল",
+        hero_card_tag: "এক্সক্লুসিভ কালেকশন",
+        hero_card_title: "ব্রাইডাল লেহেঙ্গা ও ডিজাইনার ব্লাউজ",
+        hero_card_sub: "হাতের জারদৌসি কারুকাজ ও নিখুঁত কাটিং",
+        btn_order_now: "অর্ডার",
+        cat_pre: "আমাদের বিশেষত্ব",
+        cat_title: "আমরা যা যা তৈরি করি",
+        cat_desc: "আপনার পছন্দমতো কাপড়, রঙ ও ডিজাইনে যেকোনো ধরনের পোশাক আমরা অত্যন্ত যত্নের সাথে তৈরি করি।",
+        cat_1_title: "ডিজাইনার ব্লাউজ",
+        cat_1_sub: "আরি, জারদৌসি, প্রিন্সেস কাট ও ডিপ নেক",
+        cat_2_title: "লেহেঙ্গা ও পার্টি গাউন",
+        cat_2_sub: "ব্রাইডাল, রিসেপশন, ফ্লেয়ার লেহেঙ্গা ও বল গাউন",
+        cat_3_title: "ওয়েস্টার্ন ড্রেস ও স্কার্ট",
+        cat_3_sub: "ককটেল ড্রেস, প্লিটেড স্কার্ট ও কর্সেট",
+        cat_4_title: "স্যুট ও শেরওয়ানি (Men's)",
+        cat_4_sub: "টেইলর্ড স্যুট, ব্লেজার, শার্ট, প্যান্ট ও রাজকীয় কুর্তা",
+        col_pre: "হস্তশিল্পের সম্ভার",
+        col_title: "জনপ্রিয় ডিজাইন ও কালেকশন",
+        col_sub: "আমাদের তৈরি করা জনপ্রিয় কিছু ডিজাইন। আপনার পছন্দ অনুযায়ী সাইজ ও কালার কাস্টমাইজ হবে।",
+        filter_all: "সবগুলো",
+        filter_ethnic: "লেহেঙ্গা ও ব্লাউজ",
+        filter_western: "ওয়েস্টার্ন ও পার্টি ড্রেস",
+        filter_men: "ছেলেদের কালেকশন",
+        btn_customize: "কাস্টমাইজ করুন",
+        banner_tag: "মনের মতো কোনো ডিজাইন খুঁজছেন?",
+        banner_title: "ইন্টারনেট বা Pinterest থেকে ছবি দিন, হুবহু বানিয়ে দেব!",
+        banner_desc: "যেকোনো ছবি, ড্রয়িং বা ড্রেসের ভিডিও আপলোড করে আপনার মাপ দিয়ে সরাসরি আমাদের সাথে যোগাযোগ করুন।",
+        btn_upload_design: "ডিজাইন আপলোড ও অর্ডার",
+        guide_pre: "সহজ ৪ ধাপ",
+        guide_title: "কীভাবে কাস্টম টেইলারিং কাজ করে",
+        guide_sub: "ঘরে বসেই কীভাবে সহজে পছন্দের পোশাক পারফেক্ট মাপে বানাবেন",
+        step1_title: "ডিজাইন পছন্দ করুন",
+        step1_desc: "আমাদের ক্যাটালগ থেকে বাছাই করুন অথবা যেকোনো ছবি বা স্কেচ আপলোড করুন।",
+        step2_title: "কাপড় ও স্টাইল নির্বাচন",
+        step2_desc: "আপনার পছন্দের ফ্যাব্রিক, সিল্ক, ভেলভেট, কটন বা নিজস্ব কাপড় আমাদের স্টুডিওতে দিতে পারেন।",
+        step3_title: "অনলাইনে মাপ প্রদান",
+        step3_desc: "আমাদের সহজ মেজারমেন্ট ফর্ম পূরণ করুন অথবা স্টুডিওতে এসে ট্রায়াল দিন।",
+        step4_title: "ডেলিভারি ও ট্রায়াল ফিটিং",
+        step4_desc: "পোশাক তৈরি হয়ে গেলে সরাসরি আপনার ঠিকানায় পৌঁছে দেওয়া হবে এবং ১০০% ফিটিং নিশ্চিত করা হবে।",
+        measure_help_title: "মাপ নিতে কোনো অসুবিধা হচ্ছে?",
+        measure_help_desc: "আমাদের ডিজাইনারদের সাথে ভিডিও কলে বা হোয়াটসঅ্যাপে সরাসরি কথা বলে মাপ নিশ্চিত করতে পারেন।",
+        measure_help_btn: "WhatsApp-এ জিজ্ঞাসা করুন",
+        review_pre: "গ্রাহকদের সন্তুষ্টি",
+        review_title: "আমাদের শুভাকাঙ্ক্ষীদের অভিজ্ঞতা",
+        modal_order_title: "আপনার পছন্দের পোশাকের অর্ডার দিন",
+        modal_order_desc: "ফর্মটি পূরণ করুন এবং সরাসরি হোয়াটসঅ্যাপে পুরো বিবরণ ও মাপসহ পাঠিয়ে দিন।",
+        form_dress_type: "পোশাকের ধরণ (Dress Type)*",
+        form_fabric: "কাপড় / ফ্যাব্রিক (Fabric Preference)",
+        form_upload: "ডিজাইন রেফারেন্স ফটো (Inspiration / Photo Upload)",
+        form_measure_mode: "পরিমাপ / সাইজ নির্বাচন (Measurements)",
+        form_notes: "বিশেষ কোনো নির্দেশনা / বিবরণ (Special Instructions)",
+        form_name: "আপনার নাম (Your Name)*",
+        form_phone: "ফোন / WhatsApp নম্বর*",
+        btn_submit_whatsapp: "WhatsApp-এ অর্ডার পাঠান (Send Order via WhatsApp)",
+        form_instant_note: "* বাটনে চাপ দিলে আপনার WhatsApp ওপেন হবে এবং সকল তথ্য স্বয়ংক্রিয়ভাবে মেসেজ হিসেবে প্রস্তুত হয়ে যাবে।"
+      }
+    };
+
+    let currentLang = 'bn';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      const dict = translations[lang] || translations.bn;
+      
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerText = dict[key];
+        }
+      });
+
+      const btnBn = document.getElementById('btn-lang-bn');
+      const btnEn = document.getElementById('btn-lang-en');
+      if (lang === 'bn') {
+        btnBn.className = "px-2.5 py-0.5 rounded-full bg-gold-500 text-black font-semibold transition";
+        btnEn.className = "px-2.5 py-0.5 rounded-full text-stone-400 hover:text-white transition";
+      } else {
+        btnEn.className = "px-2.5 py-0.5 rounded-full bg-gold-500 text-black font-semibold transition";
+        btnBn.className = "px-2.5 py-0.5 rounded-full text-stone-400 hover:text-white transition";
+      }
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function filterCategory(cat) {
+      const items = document.querySelectorAll('.product-item');
+      const buttons = document.querySelectorAll('.cat-filter-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-cat') === cat) {
+          btn.className = "cat-filter-btn px-4 py-2 rounded-full font-medium bg-gold-500 text-black transition";
+        } else {
+          btn.className = "cat-filter-btn px-4 py-2 rounded-full font-medium bg-royal-800 text-stone-300 hover:text-white transition";
+        }
+      });
+
+      items.forEach(item => {
+        const itemCat = item.getAttribute('data-category');
+        if (cat === 'all' || itemCat === cat || (cat === 'bridal' && itemCat === 'women-ethnic')) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+
+    function openCustomOrderModal(preselectedItem = '') {
+      const modal = document.getElementById('modal-custom-order');
+      modal.classList.remove('hidden');
+      if (preselectedItem) {
+        const select = document.getElementById('dress-type');
+        let matched = false;
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].text.toLowerCase().includes(preselectedItem.toLowerCase()) || 
+              preselectedItem.toLowerCase().includes(select.options[i].value.toLowerCase())) {
+            select.selectedIndex = i;
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) {
+          document.getElementById('order-notes').value = `Ref design: ${preselectedItem}`;
+        }
+      }
+      lucide.createIcons();
+    }
+
+    function closeCustomOrderModal() {
+      document.getElementById('modal-custom-order').classList.add('hidden');
+    }
+
+    function openAppointmentModal() {
+      document.getElementById('modal-appointment').classList.remove('hidden');
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      document.getElementById('app-date').value = tomorrow.toISOString().split('T')[0];
+      lucide.createIcons();
+    }
+
+    function closeAppointmentModal() {
+      document.getElementById('modal-appointment').classList.add('hidden');
+    }
+
+    let measureMode = 'standard';
+    function setMeasureTab(mode) {
+      measureMode = mode;
+      const stdBox = document.getElementById('measure-standard-box');
+      const custBox = document.getElementById('measure-custom-box');
+      const tabStd = document.getElementById('tab-std');
+      const tabCust = document.getElementById('tab-cust');
+
+      if (mode === 'standard') {
+        stdBox.classList.remove('hidden');
+        custBox.classList.add('hidden');
+        tabStd.className = "px-2.5 py-1 rounded-lg bg-gold-500 text-black font-semibold";
+        tabCust.className = "px-2.5 py-1 rounded-lg bg-white/5 text-stone-300 hover:text-white";
+      } else {
+        stdBox.classList.add('hidden');
+        custBox.classList.remove('hidden');
+        tabCust.className = "px-2.5 py-1 rounded-lg bg-gold-500 text-black font-semibold";
+        tabStd.className = "px-2.5 py-1 rounded-lg bg-white/5 text-stone-300 hover:text-white";
+      }
+    }
+
+    let attachedImageName = '';
+    function previewDesignImage(event) {
+      const file = event.target.files[0];
+      if (file) {
+        attachedImageName = file.name;
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById('image-preview').src = e.target.result;
+          document.getElementById('preview-filename').innerText = file.name;
+          document.getElementById('upload-placeholder').classList.add('hidden');
+          document.getElementById('image-preview-container').classList.remove('hidden');
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function handleOrderSubmit(e) {
+      e.preventDefault();
+
+      const dressType = document.getElementById('dress-type').value;
+      const fabric = document.getElementById('fabric-type').value;
+      const notes = document.getElementById('order-notes').value.trim();
+      const name = document.getElementById('cust-name').value.trim();
+      const phone = document.getElementById('cust-phone').value.trim();
+
+      let measurementSummary = "";
+      if (measureMode === 'standard') {
+        const stdSize = document.querySelector('input[name="std-size"]:checked')?.value || 'M';
+        measurementSummary = `Standard Size: ${stdSize}`;
+      } else {
+        const bust = document.getElementById('meas-bust').value;
+        const waist = document.getElementById('meas-waist').value;
+        const hips = document.getElementById('meas-hips').value;
+        const shoulder = document.getElementById('meas-shoulder').value;
+        const sleeve = document.getElementById('meas-sleeve').value;
+        const length = document.getElementById('meas-length').value;
+
+        measurementSummary = `Custom Exact Measurements (Inches):
+- Chest/Bust: ${bust || 'N/A'}"
+- Waist: ${waist || 'N/A'}"
+- Hips: ${hips || 'N/A'}"
+- Shoulder: ${shoulder || 'N/A'}"
+- Sleeve Length: ${sleeve || 'N/A'}"
+- Total Length: ${length || 'N/A'}"`;
+      }
+
+      const photoNote = attachedImageName ? `[Attached Photo: ${attachedImageName}] (I will send the photo in this WhatsApp chat)` : `No photo attached`;
+
+      const message = `✨ *NEW CUSTOM ORDER - ALIVE FASHION STUDIO* ✨
+-----------------------------------------
+👤 *Client Name:* ${name}
+📞 *Phone:* ${phone}
+
+👗 *Garment Type:* ${dressType}
+🧵 *Fabric Preference:* ${fabric}
+📸 *Design Reference:* ${photoNote}
+
+📏 *Measurements:*
+${measurementSummary}
+
+📝 *Special Instructions:*
+${notes || 'None'}
+-----------------------------------------
+📍 _Studio: Tollygunge, Kolkata_
+_Sent from Alive Fashion Studio Website_`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${STUDIO_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+      
+      window.open(whatsappUrl, '_blank');
+      closeCustomOrderModal();
+    }
+
+    function handleAppointmentSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('app-name').value;
+      const phone = document.getElementById('app-phone').value;
+      const date = document.getElementById('app-date').value;
+      const time = document.getElementById('app-time').value;
+      const purpose = document.getElementById('app-purpose').value;
+
+      const message = `📅 *VIP CONSULTATION & TRIAL BOOKING*
+-----------------------------------------
+👤 *Client Name:* ${name}
+📞 *Phone:* ${phone}
+🗓 *Date:* ${date}
+⏰ *Time:* ${time}
+🎯 *Purpose:* ${purpose}
+📍 *Location:* 85/7, Chanditala Ln, Tollygunge, Kolkata
+-----------------------------------------
+Please confirm my appointment slot with Master Designer Alamgir Seikh at Alive Fashion Studio.`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${STUDIO_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+      window.open(whatsappUrl, '_blank');
+      closeAppointmentModal();
+    }
+
+    setLanguage('bn');
+  </script>
+</body>
+</html>
