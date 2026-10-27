@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #0B0D11;
+  color: #E7E5E4;
+}
+
+.brand-title {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.15em;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #AA771C 100%);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #ECC874 0%, #F5E8C7 50%, #C5A059 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -10px rgba(197, 160, 89, 0.15);
+}
