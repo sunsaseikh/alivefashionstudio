@@ -151,6 +151,7 @@
         <nav class="hidden lg:flex items-center gap-6 text-sm font-medium tracking-wide">
           <a href="#services-overview" class="text-stone-300 hover:text-gold-400 transition">Services</a>
           <a href="#circular-services" class="text-stone-300 hover:text-gold-400 transition">All Items</a>
+          <a href="#ready-collection" class="text-stone-300 hover:text-gold-400 transition flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span><span>Ready Dresses</span></a>
           <a href="#shirts-showcase" class="text-gold-400 hover:text-gold-300 font-semibold transition flex items-center gap-1.5">
             <i data-lucide="shirt" class="w-3.5 h-3.5"></i>
             <span>Designer Shirts</span>
@@ -190,6 +191,10 @@
     <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-royal-900/98 backdrop-blur-lg px-4 py-6 space-y-3.5">
       <a href="#services-overview" onclick="toggleMobileMenu()" class="block text-stone-200 hover:text-gold-400 py-1">Services We Offer (ক্যাটাগরি)</a>
       <a href="#circular-services" onclick="toggleMobileMenu()" class="block text-stone-200 hover:text-gold-400 py-1">All Items Grid (সকল পোশাক)</a>
+      <a href="#ready-collection" onclick="toggleMobileMenu()" class="block text-gold-400 font-semibold hover:text-gold-300 py-1 flex items-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
+        <span>Ready In-Stock & Photoshoot Outfits (রেডি ড্রেস)</span>
+      </a>
       <a href="#shirts-showcase" onclick="toggleMobileMenu()" class="block text-gold-400 font-semibold hover:text-gold-300 py-1 flex items-center gap-2">
         <i data-lucide="shirt" class="w-4 h-4"></i>
         <span>Designer Handcrafted Shirts</span>
@@ -773,6 +778,357 @@
     </div>
   </section>
 
+    <!-- ==================== 6. ALAMGIR SEIKH STUDIO EXCLUSIVES & READY-TO-WEAR ==================== -->
+  <section id="ready-collection" class="py-20 bg-gradient-to-b from-[#0B0D12] via-royal-950 to-[#0F1115] border-b border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-400/40 bg-gold-500/10 text-gold-400 text-xs font-semibold tracking-wider uppercase mb-3">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Handcrafted by Alamgir Seikh • In-Stock Studio Originals</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-serif">
+          Ready In-Stock & <span class="gold-text-gradient">Studio Photoshoot Outfits</span>
+        </h2>
+        <p class="text-stone-300 text-sm sm:text-base mt-3 leading-relaxed">
+          মাস্টার ডিজাইনার আলমগীর শেখ-এর তৈরি করা অরিজিনাল ফটোশুট কালেকশন এবং স্টুডিওতে সরাসরি রেডি থাকা ডিজাইনার ব্লাউজ ও পোশাক। কোনো অপেক্ষা ছাড়া আজই ট্রায়াল দিন বা সরাসরি বুকিং করুন।
+        </p>
+
+        <!-- Key Trust Badges -->
+        <div class="mt-6 flex flex-wrap justify-center gap-4 text-xs text-stone-300">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
+            <i data-lucide="zap" class="w-3.5 h-3.5 text-gold-400"></i>
+            <span>Instant Same-Day Studio Pickup</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
+            <i data-lucide="scissors" class="w-3.5 h-3.5 text-gold-400"></i>
+            <span>Free On-Spot Fitting Adjustments</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
+            <i data-lucide="camera" class="w-3.5 h-3.5 text-gold-400"></i>
+            <span>100% Real Studio Photoshoot Guarantee</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
+        <button onclick="filterReadyCollection('all', this)" class="ready-filter-btn active px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition bg-gold-500 text-black shadow-lg">
+          All Pieces (সব)
+        </button>
+        <button onclick="filterReadyCollection('blouse', this)" class="ready-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition bg-royal-800 text-stone-300 hover:text-white hover:border-gold-500 border border-white/10">
+          Ready Blouses (রেডি ব্লাউজ)
+        </button>
+        <button onclick="filterReadyCollection('bridal', this)" class="ready-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition bg-royal-800 text-stone-300 hover:text-white hover:border-gold-500 border border-white/10">
+          Bridal & Lehengas (লেহেঙ্গা)
+        </button>
+        <button onclick="filterReadyCollection('sharara', this)" class="ready-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition bg-royal-800 text-stone-300 hover:text-white hover:border-gold-500 border border-white/10">
+          Sharara & Suits (শারারা ও স্যুট)
+        </button>
+        <button onclick="filterReadyCollection('western', this)" class="ready-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition bg-royal-800 text-stone-300 hover:text-white hover:border-gold-500 border border-white/10">
+          Gowns & Western (গাউন ও ড্রেস)
+        </button>
+        <button onclick="filterReadyCollection('shirts', this)" class="ready-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition bg-royal-800 text-stone-300 hover:text-white hover:border-gold-500 border border-white/10">
+          Ready Shirts (রেডি শার্ট)
+        </button>
+      </div>
+
+      <!-- Outfits Grid -->
+      <div id="ready-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1: Padded Blouse -->
+        <div class="ready-item luxury-card rounded-2xl overflow-hidden bg-royal-800/90 border border-white/10 flex flex-col hover:border-gold-500/50 transition group" data-category="blouse">
+          <div class="relative overflow-hidden aspect-[3/4] bg-royal-900 cursor-pointer group/img" onclick="openImageZoom('./images/padded-blouse.jpg', 'Royal Red Padded Silk Blouse')" title="Click to zoom design">
+            <img src="./images/padded-blouse.jpg" alt="Padded Silk Blouse" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-black/80 text-gold-400 border border-gold-400/40">
+              Ready in Studio
+            </span>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 flex items-center justify-center transition duration-200">
+              <span class="px-3 py-1.5 rounded-full bg-gold-500/90 text-black font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                <span>Zoom Photo</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-stone-400 mb-1">
+                <span class="text-gold-400 font-semibold">Designer Blouse</span>
+                <span class="bg-white/5 px-2 py-0.5 rounded border border-white/10">Size: 34-40 Margin</span>
+              </div>
+              <h4 class="font-bold text-white text-base group-hover:text-gold-400 transition">Royal Red Padded Silk Blouse</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">প্রিমিয়াম প্যাডেড রাজকীয় সিল্ক ব্লাউজ, ভেতরে ২ ইঞ্চি অতিরিক্ত মার্জিন সহ ট্রায়াল রেডি।</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex gap-2">
+              <a href="https://wa.me/919333004877?text=Hello%20Alamgir%20Sir%2C%20I%20am%20interested%20in%20the%20Ready%20Royal%20Red%20Padded%20Silk%20Blouse%20in%20your%20studio" target="_blank" class="flex-1 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold text-center transition flex items-center justify-center gap-1.5">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Buy / Book Now</span>
+              </a>
+              <button onclick="openQuickOrder('Ready Royal Red Padded Blouse')" class="px-3 py-2.5 rounded-xl border border-white/15 text-stone-300 hover:text-white hover:border-gold-500 text-xs font-medium transition" title="Book Studio Trial">Trial</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Lehenga Choli -->
+        <div class="ready-item luxury-card rounded-2xl overflow-hidden bg-royal-800/90 border border-white/10 flex flex-col hover:border-gold-500/50 transition group" data-category="bridal">
+          <div class="relative overflow-hidden aspect-[3/4] bg-royal-900 cursor-pointer group/img" onclick="openImageZoom('./images/lehenga-choli.jpg', 'Ivory & Pink Mirror-Work Lehenga')" title="Click to zoom design">
+            <img src="./images/lehenga-choli.jpg" alt="Lehenga Choli" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-black/80 text-gold-400 border border-gold-400/40">
+              Photoshoot Original
+            </span>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 flex items-center justify-center transition duration-200">
+              <span class="px-3 py-1.5 rounded-full bg-gold-500/90 text-black font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                <span>Zoom Photo</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-stone-400 mb-1">
+                <span class="text-gold-400 font-semibold">Festive / Bridal</span>
+                <span class="bg-white/5 px-2 py-0.5 rounded border border-white/10">Free Size Flared</span>
+              </div>
+              <h4 class="font-bold text-white text-base group-hover:text-gold-400 transition">Navratri Mirror Lehenga Choli</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">আইভরি-পিঙ্ক আসল মিরর ওয়ার্ক ঘেরওয়ালা লেহেঙ্গা, চোলি ও ম্যাচিং কন্ট্রাস্ট ওড়না।</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex gap-2">
+              <a href="https://wa.me/919333004877?text=Hello%20Alamgir%20Sir%2C%20I%20want%20to%20inquire%20about%20the%20Photoshoot%20Navratri%20Mirror%20Lehenga%20Choli" target="_blank" class="flex-1 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold text-center transition flex items-center justify-center gap-1.5">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Buy / Book Now</span>
+              </a>
+              <button onclick="openQuickOrder('Navratri Mirror Lehenga Choli')" class="px-3 py-2.5 rounded-xl border border-white/15 text-stone-300 hover:text-white hover:border-gold-500 text-xs font-medium transition" title="Book Studio Trial">Trial</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Sharara Suit -->
+        <div class="ready-item luxury-card rounded-2xl overflow-hidden bg-royal-800/90 border border-white/10 flex flex-col hover:border-gold-500/50 transition group" data-category="sharara">
+          <div class="relative overflow-hidden aspect-[3/4] bg-royal-900 cursor-pointer group/img" onclick="openImageZoom('./images/sharara.jpg', 'Deep Plum Tiered Sharara Suit')" title="Click to zoom design">
+            <img src="./images/sharara.jpg" alt="Sharara Suit" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-black/80 text-gold-400 border border-gold-400/40">
+              Ready to Wear
+            </span>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 flex items-center justify-center transition duration-200">
+              <span class="px-3 py-1.5 rounded-full bg-gold-500/90 text-black font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                <span>Zoom Photo</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-stone-400 mb-1">
+                <span class="text-gold-400 font-semibold">Tiered Sharara</span>
+                <span class="bg-white/5 px-2 py-0.5 rounded border border-white/10">Size: M / L / XL</span>
+              </div>
+              <h4 class="font-bold text-white text-base group-hover:text-gold-400 transition">Deep Plum Tiered Sharara Suit</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">রিচ প্লাম রঙে ডাবল-লেয়ার টিয়ার্ড শারারা প্যান্ট ও অল-ওভার সূক্ষ্ম জরি কুর্তি সেট।</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex gap-2">
+              <a href="https://wa.me/919333004877?text=Hello%20Alamgir%20Sir%2C%20I%20am%20interested%20in%20the%20Ready%20Deep%20Plum%20Sharara%20Suit" target="_blank" class="flex-1 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold text-center transition flex items-center justify-center gap-1.5">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Buy / Book Now</span>
+              </a>
+              <button onclick="openQuickOrder('Deep Plum Tiered Sharara')" class="px-3 py-2.5 rounded-xl border border-white/15 text-stone-300 hover:text-white hover:border-gold-500 text-xs font-medium transition" title="Book Studio Trial">Trial</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Garara Suit -->
+        <div class="ready-item luxury-card rounded-2xl overflow-hidden bg-royal-800/90 border border-white/10 flex flex-col hover:border-gold-500/50 transition group" data-category="sharara">
+          <div class="relative overflow-hidden aspect-[3/4] bg-royal-900 cursor-pointer group/img" onclick="openImageZoom('./images/garara.jpg', 'Sage Green Flared Garara Suit')" title="Click to zoom design">
+            <img src="./images/garara.jpg" alt="Garara Suit" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-black/80 text-gold-400 border border-gold-400/40">
+              Studio Original
+            </span>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 flex items-center justify-center transition duration-200">
+              <span class="px-3 py-1.5 rounded-full bg-gold-500/90 text-black font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                <span>Zoom Photo</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-stone-400 mb-1">
+                <span class="text-gold-400 font-semibold">Bridal Garara</span>
+                <span class="bg-white/5 px-2 py-0.5 rounded border border-white/10">Knee Flare Fit</span>
+              </div>
+              <h4 class="font-bold text-white text-base group-hover:text-gold-400 transition">Sage Green Embroidered Garara</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">হাতে বোনা ভারী অ্যান্টিক কাজের ঘেরওয়ালা গরারা, শর্ট কুর্তি ও অলঙ্কারসমৃদ্ধ দোপাট্টা।</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex gap-2">
+              <a href="https://wa.me/919333004877?text=Hello%20Alamgir%20Sir%2C%20I%20am%20interested%20in%20the%20Sage%20Green%20Embroidered%20Garara%20Suit" target="_blank" class="flex-1 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold text-center transition flex items-center justify-center gap-1.5">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Buy / Book Now</span>
+              </a>
+              <button onclick="openQuickOrder('Sage Green Garara Suit')" class="px-3 py-2.5 rounded-xl border border-white/15 text-stone-300 hover:text-white hover:border-gold-500 text-xs font-medium transition" title="Book Studio Trial">Trial</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Evening Gown -->
+        <div class="ready-item luxury-card rounded-2xl overflow-hidden bg-royal-800/90 border border-white/10 flex flex-col hover:border-gold-500/50 transition group" data-category="western">
+          <div class="relative overflow-hidden aspect-[3/4] bg-royal-900 cursor-pointer group/img" onclick="openImageZoom('./images/party-gown.jpg', 'Blush Pink Pearl Couture Gown')" title="Click to zoom design">
+            <img src="./images/party-gown.jpg" alt="Party Gown" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-black/80 text-gold-400 border border-gold-400/40">
+              Haute Couture Piece
+            </span>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 flex items-center justify-center transition duration-200">
+              <span class="px-3 py-1.5 rounded-full bg-gold-500/90 text-black font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                <span>Zoom Photo</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-stone-400 mb-1">
+                <span class="text-gold-400 font-semibold">Couture Gown</span>
+                <span class="bg-white/5 px-2 py-0.5 rounded border border-white/10">Size: 34-38 Fit</span>
+              </div>
+              <h4 class="font-bold text-white text-base group-hover:text-gold-400 transition">Blush Pink Pearl Couture Gown</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">ড্র্যাপড শোল্ডার ও ক্রিস্টাল পার্ল এমব্রয়ডারি করা লাক্সারি রয়্যাল ইভনিং বল গাউন।</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex gap-2">
+              <a href="https://wa.me/919333004877?text=Hello%20Alamgir%20Sir%2C%20I%20am%20interested%20in%20the%20Blush%20Pink%20Pearl%20Couture%20Gown" target="_blank" class="flex-1 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold text-center transition flex items-center justify-center gap-1.5">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Buy / Book Now</span>
+              </a>
+              <button onclick="openQuickOrder('Blush Pink Pearl Gown')" class="px-3 py-2.5 rounded-xl border border-white/15 text-stone-300 hover:text-white hover:border-gold-500 text-xs font-medium transition" title="Book Studio Trial">Trial</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Pre-Stitched Saree -->
+        <div class="ready-item luxury-card rounded-2xl overflow-hidden bg-royal-800/90 border border-white/10 flex flex-col hover:border-gold-500/50 transition group" data-category="blouse">
+          <div class="relative overflow-hidden aspect-[3/4] bg-royal-900 cursor-pointer group/img" onclick="openImageZoom('./images/stitched-saree.jpg', 'Magenta 1-Minute Pre-Stitched Saree')" title="Click to zoom design">
+            <img src="./images/stitched-saree.jpg" alt="Pre-Stitched Saree" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-black/80 text-gold-400 border border-gold-400/40">
+              Ready to Wear
+            </span>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 flex items-center justify-center transition duration-200">
+              <span class="px-3 py-1.5 rounded-full bg-gold-500/90 text-black font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                <span>Zoom Photo</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-stone-400 mb-1">
+                <span class="text-gold-400 font-semibold">1-Min Saree</span>
+                <span class="bg-white/5 px-2 py-0.5 rounded border border-white/10">Ready Pleated</span>
+              </div>
+              <h4 class="font-bold text-white text-base group-hover:text-gold-400 transition">Magenta Pre-Stitched Draped Saree</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">১ মিনিটে পরার উপযোগী প্রি-ড্র্যাপড শাড়ি উইথ এমব্রয়ডার্ড ডিজাইনার ক্রপ ব্লাউজ ও বেল্ট।</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex gap-2">
+              <a href="https://wa.me/919333004877?text=Hello%20Alamgir%20Sir%2C%20I%20am%20interested%20in%20the%20Ready%20Magenta%20Pre-Stitched%20Saree" target="_blank" class="flex-1 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold text-center transition flex items-center justify-center gap-1.5">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Buy / Book Now</span>
+              </a>
+              <button onclick="openQuickOrder('Magenta Pre-Stitched Saree')" class="px-3 py-2.5 rounded-xl border border-white/15 text-stone-300 hover:text-white hover:border-gold-500 text-xs font-medium transition" title="Book Studio Trial">Trial</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: Western Mini Dress -->
+        <div class="ready-item luxury-card rounded-2xl overflow-hidden bg-royal-800/90 border border-white/10 flex flex-col hover:border-gold-500/50 transition group" data-category="western">
+          <div class="relative overflow-hidden aspect-[3/4] bg-royal-900 cursor-pointer group/img" onclick="openImageZoom('./images/western-dress.jpg', 'Rustic Brown Western Suede Dress')" title="Click to zoom design">
+            <img src="./images/western-dress.jpg" alt="Western Dress" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-black/80 text-gold-400 border border-gold-400/40">
+              Photoshoot Piece
+            </span>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 flex items-center justify-center transition duration-200">
+              <span class="px-3 py-1.5 rounded-full bg-gold-500/90 text-black font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                <span>Zoom Photo</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-stone-400 mb-1">
+                <span class="text-gold-400 font-semibold">Western Couture</span>
+                <span class="bg-white/5 px-2 py-0.5 rounded border border-white/10">Size: S / M</span>
+              </div>
+              <h4 class="font-bold text-white text-base group-hover:text-gold-400 transition">Rustic Brown Suede Western Dress</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">বোহো ওয়েস্টার্ন কাটিং ও এমব্রয়ডার্ড ট্রিম সহ ক্লাসিক রাস্টিক ব্রাউন ড্রেস।</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex gap-2">
+              <a href="https://wa.me/919333004877?text=Hello%20Alamgir%20Sir%2C%20I%20am%20interested%20in%20the%20Rustic%20Brown%20Western%20Suede%20Dress" target="_blank" class="flex-1 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold text-center transition flex items-center justify-center gap-1.5">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Buy / Book Now</span>
+              </a>
+              <button onclick="openQuickOrder('Rustic Brown Western Dress')" class="px-3 py-2.5 rounded-xl border border-white/15 text-stone-300 hover:text-white hover:border-gold-500 text-xs font-medium transition" title="Book Studio Trial">Trial</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8: Ocean Curve Linen Shirt -->
+        <div class="ready-item luxury-card rounded-2xl overflow-hidden bg-royal-800/90 border border-white/10 flex flex-col hover:border-gold-500/50 transition group" data-category="shirts">
+          <div class="relative overflow-hidden aspect-[3/4] bg-royal-900 cursor-pointer group/img" onclick="openImageZoom('./images/shirt-ocean-curve.png', 'Ocean Curve Dual-Tone Linen Shirt')" title="Click to zoom design">
+            <img src="./images/shirt-ocean-curve.png" alt="Ocean Curve Linen Shirt" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105">
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-black/80 text-gold-400 border border-gold-400/40">
+              Ready in Studio
+            </span>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 flex items-center justify-center transition duration-200">
+              <span class="px-3 py-1.5 rounded-full bg-gold-500/90 text-black font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                <span>Zoom Photo</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-stone-400 mb-1">
+                <span class="text-gold-400 font-semibold">Designer Shirt</span>
+                <span class="bg-white/5 px-2 py-0.5 rounded border border-white/10">Size: 38, 40, 42</span>
+              </div>
+              <h4 class="font-bold text-white text-base group-hover:text-gold-400 transition">Ocean Curve Dual-Tone Linen Shirt</h4>
+              <p class="text-xs text-stone-400 mt-1 line-clamp-2">ডুয়েল-টোন সিগনেচার কার্ভ কাটিং ও খাঁটি লিনেন ফেব্রিক দিয়ে তৈরি রেডি শার্ট।</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex gap-2">
+              <a href="https://wa.me/919333004877?text=Hello%20Alamgir%20Sir%2C%20I%20am%20interested%20in%20the%20Ready%20Ocean%20Curve%20Linen%20Shirt" target="_blank" class="flex-1 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold text-center transition flex items-center justify-center gap-1.5">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Buy / Book Now</span>
+              </a>
+              <button onclick="openQuickOrder('Ocean Curve Linen Shirt')" class="px-3 py-2.5 rounded-xl border border-white/15 text-stone-300 hover:text-white hover:border-gold-500 text-xs font-medium transition" title="Book Studio Trial">Trial</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Studio Visit Banner Callout -->
+      <div class="mt-14 p-6 sm:p-8 rounded-3xl bg-royal-800/80 border border-gold-500/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/30">
+            <i data-lucide="map-pin" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h3 class="text-lg sm:text-xl font-bold text-white font-serif">সরাসরি স্টুডিওতে এসে ট্রায়াল দিয়ে পছন্দ করতে চান?</h3>
+            <p class="text-xs text-stone-300 mt-1">৮৫/৭ চণ্ডীতলা লেন, টালিগঞ্জ, কলকাতা। যেকোনো রেডি ড্রেস ট্রায়াল দেওয়া ও প্রয়োজনমতো স্পট ফিটিং অলটারেশন সম্পূর্ণ ফ্রি।</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="https://wa.me/919333004877?text=Hello%20Alamgir%20Sir%2C%20I%20want%20to%20visit%20your%20Tollygunge%20Studio%20for%20Ready%20Dresses%20trial" target="_blank" class="px-6 py-3 rounded-full bg-gold-500 hover:bg-gold-400 text-black font-bold text-xs uppercase tracking-wider transition flex items-center gap-2 shadow-lg">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Book Studio Visit</span>
+          </a>
+          <a href="tel:+919333004877" class="p-3 rounded-full bg-white/5 border border-white/15 text-gold-400 hover:text-white hover:bg-white/10 transition" title="Call Designer">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
   <!-- ==================== 7. HOW DOES IT WORK? (SILAILOR IMAGE 1 BOTTOM) ==================== -->
   <section id="how-it-works" class="py-20 bg-royal-900/60 border-b border-white/5 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -994,103 +1350,251 @@
   </section>
 
   <!-- ==================== 9. TRANSPARENT RATE CARD / PRICE LIST ==================== -->
-  <section id="pricing" class="py-20 bg-royal-900/40 border-b border-white/5">
+  <section id="pricing" class="py-20 bg-royal-900/50 border-b border-white/5 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="text-xs uppercase tracking-[0.2em] text-gold-400 font-semibold block mb-1">Pricing & Rate Card</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white font-serif">স্বচ্ছ মূল্য তালিকা (Stitching Rates)</h2>
-        <p class="text-stone-400 text-sm mt-2">কোনো গোপন চার্জ নেই। আপনার নিজের কাপড় দিয়ে সেলাই করাতে পারেন অথবা স্টুডিওর ফ্যাব্রিক নিতে পারেন।</p>
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold block mb-2">Official Tailoring Charges</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white font-serif">স্বচ্ছ মূল্য তালিকা (Stitching Rate Card)</h2>
+        <p class="text-stone-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          Stitching charges vary depending on location, cloth, design, turnaround time, and other factors. Keeping all these factors in mind, here is the official rate card for blouse, salwar suit, pant coat, lehenga, saree, formal shirt, churidar, and other tailor services.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="mt-6 max-w-md mx-auto relative">
+          <input type="text" id="rate-search" oninput="searchRateCard()" placeholder="🔍 Search any item (e.g. Blouse, Suit, Kurti, Lehenga, Shirt)..." class="w-full bg-royal-800 border border-gold-500/30 rounded-full px-5 py-3 text-xs sm:text-sm text-white placeholder-stone-400 focus:outline-none focus:border-gold-400 shadow-xl">
+        </div>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-8 items-start">
+      <!-- Categories Grid (5 Clear Luxury Cards) -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-start" id="rate-cards-container">
         
-        <!-- Women's Rates -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-royal-800/70 border border-white/10 space-y-4">
-          <div class="flex items-center justify-between pb-3 border-b border-white/10">
-            <h3 class="text-xl font-bold text-white font-serif">Women's Tailoring Rates</h3>
-            <span class="text-xs px-2.5 py-0.5 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/30">Starting Rates</span>
+        <!-- Category 1: Blouse & Saree -->
+        <div class="rate-card-category p-6 sm:p-7 rounded-3xl bg-royal-800/80 border border-white/10 hover:border-gold-500/40 transition shadow-xl">
+          <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-sm">🥻</span>
+              <h3 class="text-lg font-bold text-white font-serif">Blouse & Saree</h3>
+            </div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-gold-500/10 text-gold-400 border border-gold-500/20">9 Items</span>
           </div>
 
-          <div class="space-y-3 text-xs sm:text-sm">
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Simple Blouse (Without Lining)</span>
-              <span class="text-gold-400 font-bold">₹ 550/-</span>
+          <div class="space-y-2.5 text-xs sm:text-sm divide-y divide-white/5">
+            <div class="rate-item flex justify-between items-center pt-2" data-name="simple blouse without lining">
+              <span class="text-stone-200">Simple Blouse (Without Lining)</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 580/-</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Designer Blouse (With Inner Lining)</span>
-              <span class="text-gold-400 font-bold">₹ 850/-</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="simple blouse lining">
+              <span class="text-stone-200">Simple Blouse (Lining)</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 1,080/-</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Padded / Princess Cut Blouse</span>
-              <span class="text-gold-400 font-bold">₹ 1,450/-</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="padded blouse">
+              <span class="text-stone-200">Padded Blouse</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 1,280/-</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Aari & Zardozi Handwork Blouse</span>
-              <span class="text-gold-400 font-bold">₹ 2,200/- onwards</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="designer blouse">
+              <span class="text-stone-200">Designer Blouse</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 1,800/-</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Suit Salwar / Palazzo Set</span>
-              <span class="text-gold-400 font-bold">₹ 1,250/- onwards</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="saree">
+              <span class="text-stone-200">Saree</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 1,200/-</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Floor Length Anarkali Suit / Gown</span>
-              <span class="text-gold-400 font-bold">₹ 2,800/- onwards</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="saree with petticoat">
+              <span class="text-stone-200">Saree With Petticoat</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 1,590/-</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Semi-Stitched Lehenga Stitching</span>
-              <span class="text-gold-400 font-bold">₹ 3,480/- onwards</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="custom petticoat">
+              <span class="text-stone-200">Custom Petticoat</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 580/-</span>
             </div>
-            <div class="flex justify-between py-1.5">
-              <span>Saree Fall & Pico Finishing</span>
-              <span class="text-gold-400 font-bold">₹ 180/- – ₹ 380/-</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="custom petticoat with petticoat">
+              <span class="text-stone-200">Custom Petticoat With Petticoat</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 1,580/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="fall pico">
+              <span class="text-stone-200">Fall Pico</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 180/-</span>
             </div>
           </div>
+
+          <button onclick="openQuickOrder('Designer Blouse / Saree')" class="w-full mt-5 py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-black font-semibold text-xs transition border border-gold-500/30">
+            Book Blouse / Saree Stitching
+          </button>
         </div>
 
-        <!-- Men's Rates -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-royal-800/70 border border-white/10 space-y-4">
-          <div class="flex items-center justify-between pb-3 border-b border-white/10">
-            <h3 class="text-xl font-bold text-white font-serif">Men's Bespoke Rates</h3>
-            <span class="text-xs px-2.5 py-0.5 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/30">Starting Rates</span>
+        <!-- Category 2: Kurti, Salwar & Suits -->
+        <div class="rate-card-category p-6 sm:p-7 rounded-3xl bg-royal-800/80 border border-white/10 hover:border-gold-500/40 transition shadow-xl">
+          <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-sm">🌸</span>
+              <h3 class="text-lg font-bold text-white font-serif">Kurti, Salwar & Suits</h3>
+            </div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-gold-500/10 text-gold-400 border border-gold-500/20">8 Items</span>
           </div>
 
-          <div class="space-y-3 text-xs sm:text-sm">
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Custom Formal / Casual Shirt</span>
-              <span class="text-gold-400 font-bold">₹ 1,150/- onwards</span>
+          <div class="space-y-2.5 text-xs sm:text-sm divide-y divide-white/5">
+            <div class="rate-item flex justify-between items-center pt-2" data-name="kurti without lining">
+              <span class="text-stone-200">Kurti (Without Lining)</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 380/-</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Designer Handcrafted Linen Shirt</span>
-              <span class="text-gold-400 font-bold">₹ 2,199/- – ₹ 2,699/-</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="kurti lining">
+              <span class="text-stone-200">Kurti (Lining)</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 680/-</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Formal Trousers / Chinos / Pants</span>
-              <span class="text-gold-400 font-bold">₹ 1,250/- onwards</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="suit salwar stitching">
+              <span class="text-stone-200">Suit Salwar Stitching</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 780/-</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Tailored Blazer / Coat</span>
-              <span class="text-gold-400 font-bold">₹ 4,800/- onwards</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="suit salwar half lining">
+              <span class="text-stone-200">Suit Salwar (Half Lining)</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 1,080/-</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Bespoke 2-Piece Suit (Blazer + Pants)</span>
-              <span class="text-gold-400 font-bold">₹ 7,500/- onwards</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="suit pant palazzo stitching">
+              <span class="text-stone-200">Suit Pant / Palazzo Stitching</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 680/-</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Luxury 3-Piece Suit (with Waistcoat)</span>
-              <span class="text-gold-400 font-bold">₹ 9,500/- onwards</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="suit pant palazzo half lining">
+              <span class="text-stone-200">Suit Pant / Palazzo (Half Lining)</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 880/-</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-white/5">
-              <span>Kurta & Pajama / Dhoti Set</span>
-              <span class="text-gold-400 font-bold">₹ 1,800/- onwards</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="suit pant palazzo full lining">
+              <span class="text-stone-200">Suit Pant / Palazzo (Full Lining)</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 1,280/-</span>
             </div>
-            <div class="flex justify-between py-1.5">
-              <span>Royal Wedding Sherwani</span>
-              <span class="text-gold-400 font-bold">₹ 4,500/- onwards</span>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="sharara gharara suit">
+              <span class="text-stone-200">Sharara / Gharara Suit</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 3,480/-</span>
             </div>
           </div>
+
+          <button onclick="openQuickOrder('Suit Salwar / Kurti')" class="w-full mt-5 py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-black font-semibold text-xs transition border border-gold-500/30">
+            Book Salwar / Kurti Stitching
+          </button>
         </div>
 
+        <!-- Category 3: Lehenga & Anarkali -->
+        <div class="rate-card-category p-6 sm:p-7 rounded-3xl bg-royal-800/80 border border-white/10 hover:border-gold-500/40 transition shadow-xl">
+          <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-sm">👑</span>
+              <h3 class="text-lg font-bold text-white font-serif">Lehenga & Anarkali</h3>
+            </div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-gold-500/10 text-gold-400 border border-gold-500/20">5 Items</span>
+          </div>
+
+          <div class="space-y-2.5 text-xs sm:text-sm divide-y divide-white/5">
+            <div class="rate-item flex justify-between items-center pt-2" data-name="lehenga">
+              <span class="text-stone-200">Lehenga</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 2,200/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="semi stitched lehenga stitching">
+              <span class="text-stone-200">Semi-Stitched Lehenga Stitching</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 2,480/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="a line lehenga skirt">
+              <span class="text-stone-200">A Line Lehenga Skirt</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 2,980/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="lehenga choli stitching">
+              <span class="text-stone-200">Lehenga Choli Stitching</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 3,200/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="anarkali dress">
+              <span class="text-stone-200">Anarkali Dress</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 3,200/-</span>
+            </div>
+          </div>
+
+          <button onclick="openQuickOrder('Lehenga / Anarkali Dress')" class="w-full mt-5 py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-black font-semibold text-xs transition border border-gold-500/30">
+            Book Lehenga Stitching
+          </button>
+        </div>
+
+        <!-- Category 4: Gown, Western & Dresses -->
+        <div class="rate-card-category p-6 sm:p-7 rounded-3xl bg-royal-800/80 border border-white/10 hover:border-gold-500/40 transition shadow-xl">
+          <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-sm">💃</span>
+              <h3 class="text-lg font-bold text-white font-serif">Gown & Western</h3>
+            </div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-gold-500/10 text-gold-400 border border-gold-500/20">5 Items</span>
+          </div>
+
+          <div class="space-y-2.5 text-xs sm:text-sm divide-y divide-white/5">
+            <div class="rate-item flex justify-between items-center pt-2" data-name="maxi dress">
+              <span class="text-stone-200">Maxi Dress</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 1,980/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="skirt">
+              <span class="text-stone-200">Skirt</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 1,580/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="jumpsuit">
+              <span class="text-stone-200">Jumpsuit</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 1,480/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="gown">
+              <span class="text-stone-200">Gown</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 3,500/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="western dress">
+              <span class="text-stone-200">Western Dress</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 4,990/-</span>
+            </div>
+          </div>
+
+          <button onclick="openQuickOrder('Party Gown / Western Dress')" class="w-full mt-5 py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-black font-semibold text-xs transition border border-gold-500/30">
+            Book Gown / Western Stitching
+          </button>
+        </div>
+
+        <!-- Category 5: Men's & Formal Suits -->
+        <div class="rate-card-category p-6 sm:p-7 rounded-3xl bg-royal-800/80 border border-white/10 hover:border-gold-500/40 transition shadow-xl md:col-span-2 lg:col-span-1">
+          <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-sm">👔</span>
+              <h3 class="text-lg font-bold text-white font-serif">Men's & Suits</h3>
+            </div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-gold-500/10 text-gold-400 border border-gold-500/20">5 Items</span>
+          </div>
+
+          <div class="space-y-2.5 text-xs sm:text-sm divide-y divide-white/5">
+            <div class="rate-item flex justify-between items-center pt-2" data-name="formal shirt">
+              <span class="text-stone-200">Formal Shirt</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 650/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="formal trouser">
+              <span class="text-stone-200">Formal Trouser</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 890/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="blazer stitching">
+              <span class="text-stone-200">Blazer Stitching</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 3,250/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="2 piece suit">
+              <span class="text-stone-200">2 Piece Suit</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 5,790/-</span>
+            </div>
+            <div class="rate-item flex justify-between items-center pt-2" data-name="3 piece suit">
+              <span class="text-stone-200">3 Piece Suit</span>
+              <span class="text-gold-400 font-bold shrink-0 ml-2">₹ 7,200/-</span>
+            </div>
+          </div>
+
+          <button onclick="openQuickOrder('Men\'s Suit / Shirt')" class="w-full mt-5 py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-black font-semibold text-xs transition border border-gold-500/30">
+            Book Men's Suit / Shirt Stitching
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Footer Guarantee & Note -->
+      <div class="mt-12 p-6 rounded-2xl bg-royal-800/40 border border-white/5 text-center max-w-3xl mx-auto">
+        <p class="text-xs text-stone-400 leading-relaxed">
+          💡 <span class="text-gold-400 font-semibold">বিঃ দ্রঃ</span> সেলাই চার্জ কাপড়, কাস্টম ডিজাইন, কাজের জটিলতা, জরুরি ডেলিভারি ইত্যাদির ওপর ভিত্তি করে সামান্য পরিবর্তিত হতে পারে। যেকোনো বিশেষ ডিজাইন বা বাল্ক অর্ডারের জন্য সরাসরি <a href="https://wa.me/919333004877" target="_blank" class="text-gold-400 underline font-semibold">হোয়াটসঅ্যাপে কথা বলুন</a>।
+        </p>
       </div>
 
     </div>
@@ -1480,6 +1984,31 @@ Hello Alamgir Sir, I am viewing the *${currentZoomGarment}* photo on your websit
       }
     });
 
+    
+    function filterReadyCollection(category, btnElement) {
+      const items = document.querySelectorAll('.ready-item');
+      const buttons = document.querySelectorAll('.ready-filter-btn');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'bg-gold-500', 'text-black', 'shadow-lg');
+        btn.classList.add('bg-royal-800', 'text-stone-300', 'border', 'border-white/10');
+      });
+
+      if (btnElement) {
+        btnElement.classList.add('active', 'bg-gold-500', 'text-black', 'shadow-lg');
+        btnElement.classList.remove('bg-royal-800', 'text-stone-300', 'border', 'border-white/10');
+      }
+
+      items.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
     function toggleMobileMenu() {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     }
@@ -1569,6 +2098,30 @@ Please confirm my custom stitching appointment at Alive Fashion Studio.`;
     tomorrow.setDate(tomorrow.getDate() + 1);
     if (document.getElementById('direct-date')) {
       document.getElementById('direct-date').value = tomorrow.toISOString().split('T')[0];
+    }
+
+    
+    function searchRateCard() {
+      const input = document.getElementById('rate-search');
+      if (!input) return;
+      const query = input.value.toLowerCase().trim();
+      const items = document.querySelectorAll('.rate-item');
+      const categories = document.querySelectorAll('.rate-card-category');
+
+      items.forEach(item => {
+        const name = (item.getAttribute('data-name') || '').toLowerCase();
+        const text = item.innerText.toLowerCase();
+        if (!query || name.includes(query) || text.includes(query)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      categories.forEach(cat => {
+        const visibleItems = cat.querySelectorAll('.rate-item:not([style*="display: none"])');
+        cat.style.display = (query && visibleItems.length === 0) ? 'none' : 'block';
+      });
     }
 
     function setLanguage(lang) {
